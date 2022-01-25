@@ -1,25 +1,55 @@
-## Ejemplo Spring Initializr
+`Desarrollo Web` > `BackEnd Básico Java`
 
-### OBJETIVO
+## 🧠 Ejemplo 01: Tareas personalizadas
 
-- Crear un proyecto de Spring Boot usando Spring Initializr
+### 🎯 OBJETIVO
 
-#### REQUISITOS
+- Crear un archivo `build.gradle`
+- Crear una tarea personalizada en **Gradle**
 
-1. Tener un IDE instalado, de preferencia IntelliJ IDEA.
+### 📃 REQUISITOS
 
-#### DESARROLLO
+1. Tener **Gradle** instalado en el equipo
+2. Tener un editor de código instalado en el equipo
+3. Tener acceso a la terminal del equipo
 
-Visitar [Spring Initializr](https://start.spring.io/) y explorar las opciones que nos ofrece, por ahora usaremos las opciones por defecto.
+### 🎩 DESARROLLO
 
-Cuando terminemos de explorar podemos presionar el boton `generate` para descargar el proyecto de Spring boot.
+Comenzamos creando un archivo llamado `build.gradle`.
 
-![Spring Initializr](initializrdefault.png)
+> 💡 *Nota: Es importante verificar que el archivo se llame exactamente `build.gradle` dado que Gradle busca un archivo con ese nombre para saber qué hacer.*
 
-Una vez descargado el archivo lo podemos descomprimir y tendremos la siguiente estructura de archivos:
+A continuación escribiremos las siguientes líneas que nos ayudarán a definir nuestra tarea personalizada:
 
-![Demo](demotree.png)
+```groovy
+task hello {
+}
+```
 
-Y podemos abrir el proyecto en IntelliJ IDEA con la opción `open`. Una vez abierto esperamos a que el IDE baje las dependencias (puede tardar mucho dependiendo de la conexión de internet). Cuando termine de bajar podemos correr el proyecto por medio del menu `Run > Run 'DemoApplication'` (O con `Shift-F10`).
+¿No entiendes que acabamos de escribir? ¡Tranquilo! 😅
 
-![Demo project Intellij IDEA](demoidea.png)
+Lo que acabamos de escribir es la definición de una **tarea** en lenguaje **Groovy**, es decir, una **función** llamada *hello* (nombre al que haremos referencia a la tarea para poder ejecutarla).
+
+Lo siguiente será escribir lo que queremos que haga la tarea, en este caso queremos que imprima en pantalla la palabra "Hello World":
+
+```groovy
+task hello {
+  doLast {
+    println 'Hello World'
+  }
+}
+```
+
+Nuevamente escribimos una función llamanda *doLast* que nos permite ejecutar líneas de código en lenguaje Groovy.
+
+Por último `println 'Hello World'` puedes verlo como usar `System.out.println` de Java, es decir, imprimimos en pantalla la palabra "Hello World".
+
+Guardamos el archivo, abrimos la terminal y ubicados en la carpeta que contenga el archivo `build.gradle` ejecutaremos el siguiente comando:
+
+`gradle hello`
+
+Teniendo como resultado:
+
+<img src="ejercicio-01-resultado.png" alt="Resultado del Ejercicio 01"/>
+
+¡Muy bien! Acabamos de ejecutar nuestra primer tarea personalizada de Gradle 🎉🥳🎊

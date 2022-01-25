@@ -1,20 +1,49 @@
-## Spring Boot y Gradle
+`Desarrollo Web` > `BackEnd Básico Java`
 
-### OBJETIVO
+## 🧠 Ejemplo 02: Ejecutar el JAR generado por Gradle
 
-- Hacer un proyecto de Spring Boot usando Gradle como manejador de dependencias.
+### 🎯 OBJETIVO
 
-#### REQUISITOS
+- Ejecutar de manera satisfactoria el JAR generado por Gradle
 
-1. Tener IntelliJ IDEA instalado y funcionando.
+### 📃 REQUISITOS
 
-#### DESARROLLO
+1. Tener **Gradle** instalado en el equipo
+2. Tener un editor de código instalado en el equipo
+3. Tener acceso a la terminal del equipo
 
-Visitar [Spring Initializr](https://start.spring.io/) y seleccionar las mismas opciones que se muestran en la siguiente figura.
+### 🎩 DESARROLLO
 
-![Spring Initializr](springgradle.png)
+En el ejercicio anterior pudimos compilar un archivo Java usando el plugin de Java pero... ¿notaste algo más al ejecutar el comando `gradle build`? 🤔
 
-Una vez descargado el proyecto podemos descomprimirlo y abrirlo en IntelliJ IDEA. Un archivo importante a notar es el archivo [build.gradle](demo/build.gradle) el cual maneja la configuración de Gradle. En este archivo se manejan las dependencias que usará nuestro proyecto así como la versión de java que usaremos. El archivo [settings.gradle](demo/settings.gradle) tambien es importante y maneja los sub-proyectos de nuestro proyecto pero el IDE se encarga de actualizarlo en la mayoria de los casos de uso normales.
+Además de compilar nuestro código, Gradle genera una carpeta llamada **build** que entre muchas cosas contiene el archivo JAR resultado de compilar nuestro código Java:
 
-![settings.gradle](settingsgradle.png)
+<img src="ejercicio-03-tree.png" alt="JAR" />
 
+> 💡 *Nota: El JAR resultante tendrá el nombre de la carpeta que contenga el archivo build.gradle.*
+
+Por lo tanto, si queremos ejecutar cualquier archivo JAR basta con ejecutar el comando `java -jar archivo.jar`.
+
+Pero lamentablemente si ejecutamos el JAR generado por Gradle obtendremos el siguiente resultado:
+
+<img src="ejercicio-03-error.png" alt="Error" />
+
+¿Qué salió mal? 😫😭
+
+Básicamente el JAR generado no contiene la referencia de la clase principal, por lo tanto modificaremos el archivo `build.gradle` para incluir las siguientes líneas:
+
+```groovy
+...
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'HelloWorldExample'
+  }
+}
+```
+
+Con esto especificamos que el JAR generado al momento de ejecutar el comando `gradle build` utilice la clase `HelloWorldExample` como clase principal en su ejecución.
+
+Por último ejecutaremos nuevamente el comando `gradle build` para generar nuevamente el archivo JAR y al ejecutar el JAR obtendremos el siguiente resultado:
+
+<img src="ejercicio-03-resultado.png" alt="Resultado" />
