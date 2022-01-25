@@ -33,7 +33,7 @@ Pero lamentablemente si ejecutamos el JAR generado por Gradle obtendremos el sig
 Básicamente el JAR generado no contiene la referencia de la clase principal, por lo tanto modificaremos el archivo `build.gradle` para incluir las siguientes líneas:
 
 ```groovy
-...
+//...
 
 jar {
   manifest {

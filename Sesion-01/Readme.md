@@ -46,20 +46,19 @@ Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso 
 - Tareas personalizadas
 
 	- [Ejemplo 01](Ejemplo-01)
-	- [Reto 01](Reto-01)
 
-- Compilación y generación de JARs
+- Compilación y generación de archivos JAR
 
 	- [Ejemplo 02](Ejemplo-02)
+  - [Ejemplo 03](Ejemplo-02)
+  - [Reto 01](Reto-01)
 	- [Reto 02](Reto-02)
 
 - Compilación y ejecución de aplicaciones Java
 
-	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
 	- [Ejemplo 04](Ejemplo-04)
 	- [Reto 04](Reto-04)
 
 - **POSTWORK**
  
-  - [lol]()
+  - [Compilación de Markdown](Postwork)
