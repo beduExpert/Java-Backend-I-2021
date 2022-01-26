@@ -52,12 +52,11 @@ Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso 
 	- [Ejemplo 02](Ejemplo-02)
   - [Ejemplo 03](Ejemplo-03)
   - [Reto 01](Reto-01)
-  - [Reto 02](Reto-02)
 
 - Compilación y ejecución de aplicaciones Java
 
 	- [Ejemplo 04](Ejemplo-04)
-	- [Reto 03](Reto-03)
+	- [Reto 02](Reto-03)
 
 - **POSTWORK**
  
