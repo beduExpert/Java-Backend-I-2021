@@ -25,13 +25,13 @@ Debemos verificar que nuestro equipo tenga correctamente instalado **Java** y **
 
 - Para verificar la versión instalada de **Java** ejecuta el comando `java -version`:
 
-<img src="../java-version.png" alt="Versión de Java" width="300"/>
+<img src="../java-version.png" alt="Versión de Java" />
 
 *Nota: Usaremos la versión 11 de Java aunque puedes usar la más reciente.*
 
 - Para verificar la versión instalada de **Gradle** ejecuta el comando `gradle -version`:
 
-<img src="../gradle-version.png" alt="Versión de Gradle" width="300"/>
+<img src="../gradle-version.png" alt="Versión de Gradle" />
 
 *Nota: Usaremos la versión 7 de Gradle aunque puedes usar la más reciente.*
 
@@ -57,7 +57,7 @@ Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso 
 - Compilación y ejecución de aplicaciones Java
 
 	- [Ejemplo 04](Ejemplo-04)
-	- [Reto 04](Reto-04)
+	- [Reto 03](Reto-03)
 
 - **POSTWORK**
  

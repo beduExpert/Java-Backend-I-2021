@@ -1,24 +1,19 @@
-## Usar dependencias con Gradle
+`Desarrollo Web` > `BackEnd Básico Java`
 
-### Objetivo 
+## 💪 Reto 02: Ejecución de una aplicación Java con Gradle
 
-Agregar dependencias a nuestro proyecto usando Gradle y conocer los starters de Spring Boot.
+### 🎯 OBJETIVO
 
-Al final necesitamos un proyecto con las siguientes características:
-- Manejador de dependencias: Gradle
-- Lenguaje de programación: Java 11
-- Versión de Spring Boot: 2.2.0
-- Usar las dependencias: Lombok, Spring Web, Spring Data JDBC
+- Compilar y ejecutar un programa en Java utilizando Gradle como herramienta de construcción
 
-#### Requisitos 
+### 📃 REQUISITOS
 
-IntelliJ IDEA instalado y funcionando.
+1. Tener **Gradle** instalado en el equipo
+2. Tener un editor de código instalado en el equipo
+3. Tener acceso a la terminal del equipo
 
-#### Desarrollo
+### 🎩 DESARROLLO
 
-Visitar [Spring Initializr](https://start.spring.io/), seleccionar las opciones adecuadas, descargar el proyecto e importarlo a IntelliJ IDEA.
-
-#### Solución
-
-Consultar la carpeta [solucion](solucion)
-
+<details>
+  <summary>Solución</summary>
+</details>

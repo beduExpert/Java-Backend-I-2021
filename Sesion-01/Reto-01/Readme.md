@@ -1,21 +1,51 @@
-## Spring Initializr
+`Desarrollo Web` > `BackEnd Básico Java`
 
-### Objetivo 
+## 💪 Reto 01: Compilación y generación de JAR con Gradle
 
-Crear un proyecto de Spring Boot usando [Spring Initializr](https://start.spring.io/) con las siguientes características:
-- Manejador de dependencias: Gradle
-- Lenguaje de programación: Java 11
-- Version de Spring Boot: 2.2.0
+### 🎯 OBJETIVO
 
-#### REQUISITOS 
+- Crear un archivo JAR a partir de un código Java usando Gradle
 
-IntelliJ IDEA instalado y funcionando.
+### 📃 REQUISITOS
 
-#### DESARROLLO
+1. Tener **Gradle** instalado en el equipo
+2. Tener un editor de código instalado en el equipo
+3. Tener acceso a la terminal del equipo
 
-Visitar [Spring Initializr](https://start.spring.io/), seleccionar las opciones adecuadas, descargar el proyecto e importarlo a IntelliJ IDEA.
+### 💡 DESCRIPCIÓN
 
-#### Solución
+Crear un programa en Java que convierta un número entero a binario, dicho programa deberá compilarse con Gradle.
 
-Consultar la carpeta [solucion](solucion)
+<details>
+  <summary>Solución</summary>
 
+  Afortunadamente Java cuenta con un método estático en la clase Integer que convierte un número entero en binario:
+
+  ```java
+  public class IntegerToBinary {
+    public static void main(String [] args) {
+      int number = 20;
+
+      String binary = Integer.toBinaryString(number);
+
+      System.out.println(binary);
+    }
+  }
+  ```
+
+  Por último, basados en el Ejemplo 02 y 03 podemos crear el siguiente archivo de Gradle:
+
+  ```groovy
+  plugins {
+    id 'java'
+  }
+
+  jar {
+    manifest {
+      attributes 'Main-Class': 'IntegerToBinary'
+    }
+  }
+  ```
+
+  Así al ejecutar el comando `gradle build` generará el JAR correspondiente.
+</details>
