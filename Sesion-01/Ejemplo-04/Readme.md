@@ -1,22 +1,45 @@
-## Tareas programadas con Spring
+`Desarrollo Web` > `BackEnd Básico Java`
 
-### OBJETIVO
+## 🧠 Ejemplo 04: Compilando y Ejecutando aplicaciones Java
 
-Hacer que tareas se ejecuten cada cierto tiempo usando Spring.
+### 🎯 OBJETIVO
 
-#### REQUISITOS
+- Compilar y ejecutar una aplicación de Java a través de Gradle
 
-Tener instalado y configurado IntelliJ Idea y crear un proyecto con Spring Initializr usando `gradle`. De ahora en adelante usaremos gradle como manejador de dependencias.
+### 📃 REQUISITOS
 
-#### DESARROLLO
+1. Tener **Gradle** instalado en el equipo
+2. Tener un editor de código instalado en el equipo
+3. Tener acceso a la terminal del equipo
 
-Una vez creado un proyecto con Spring Initializr vamos a empezar a explorar las facilidades que nos ofrece Spring y Spring Boot para desarrollar aplicaciones de backend. Empezaremos con algo sencillo: hacer que Spring ejecute una tarea cada cierto tiempo.
+### 🎩 DESARROLLO
 
-Agregaremos una dependencia para hacer logging `slf4j-api`, para esto hay que referirnos a los retos anteriores o a [build.gradle](tareas-programadas/build.gradle) (linea 17)
+En el ejercicio anterior logramos poder ejecutar el JAR que genera el plugin de Java para Gradle pero a pesar de eso el proceso para correr un programa sigue siendo bastante complicado... ¿existirá alguna forma de hacerlo más simple? 😫
 
-Empecemos creando una nueva clase en `src/main/java/com.example.tareasprogramadas` llamada [TareasProgramadas.java](tareas-programadas/src/main/java/com/example/tareasprogramadas/TareasProgramadas.java)
+Afortunadamente existe un plugin de Gradle llamado **application** que permite no solo la compilación de código Java, si no también su ejecución, así que manos a la obra ⚒
 
-Por ultimo agregaremos una notación a nuestra aplicación para activar la planificación de tareas. [TareasProgramadasApplicacion.java](tareas-programadas/src/main/java/com/example/tareasprogramadas/TareasProgramadasApplication.java)
+Comenzamos creando nuevamente un archivo `build.gradle` pero en esta ocasión utilizaremos el plugin de *application*:
 
-![TareasProgramadasApplication.java](tareasprogramadas.png)
+```groovy
+plugins {
+  id 'application'
+}
+```
 
+Después, al igual que con el plugin de Java hay que especificar cuál será la clase principal de nuestra aplicación:
+
+```groovy
+//...
+
+application {
+  mainClass = "HelloWorldExample"
+}
+```
+
+Por lo tanto al ejecutar el comando `gradle tasks` podremos ver las tareas disponibles:
+
+![](img/ejercicio-04-tasks.png)
+
+Finalmente ejecutaremos el comando `gradle run` y veremos el resultado de ejecutar nuestro programa en la terminal:
+
+![](img/ejercicio-04-run.png)

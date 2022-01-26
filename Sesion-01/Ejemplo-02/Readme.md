@@ -30,7 +30,7 @@ plugins {
 
 Con estas simples líneas Gradle entenderá que hay que usar el **plugin de Java**. Por lo tanto al momento de ejecutar el comando `gradle tasks` veremos las siguientes tareas:
 
-<img src="ejercicio-02-tasks.png" alt="Tareas del plugin de Java" />
+![](img/ejercicio-02-tasks.png)
 
 Todas las tareas están disponibles gracias al plugin de Java.
 
@@ -54,6 +54,6 @@ Como puedes ver, es un código bastante básico que imprime en pantalla "Hello f
 
 Ahora ha llegado el momento de la verdad, ejecutaremos el comando `gradle build` para compilar nuestro código obteniendo el siguiente resultado:
 
-<img src="ejercicio-02-build.png" alt="Compilación de código Java"/>
+![](img/ejercicio-02-build.png)
 
 Esto quiere decir que el código fue compilado con éxito 😎.

@@ -50,9 +50,9 @@ Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso 
 - Compilación y generación de archivos JAR
 
 	- [Ejemplo 02](Ejemplo-02)
-  - [Ejemplo 03](Ejemplo-02)
+  - [Ejemplo 03](Ejemplo-03)
   - [Reto 01](Reto-01)
-	- [Reto 02](Reto-02)
+  - [Reto 02](Reto-02)
 
 - Compilación y ejecución de aplicaciones Java
 

@@ -50,6 +50,6 @@ Guardamos el archivo, abrimos la terminal y ubicados en la carpeta que contenga 
 
 Teniendo como resultado:
 
-<img src="ejercicio-01-resultado.png" alt="Resultado del Ejercicio 01"/>
+![](img/ejercicio-01-hello.png)
 
 ¡Muy bien! Acabamos de ejecutar nuestra primer tarea personalizada de Gradle 🎉🥳🎊
