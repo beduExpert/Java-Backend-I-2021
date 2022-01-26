@@ -12,8 +12,40 @@
 2. Tener un editor de código instalado en el equipo
 3. Tener acceso a la terminal del equipo
 
-### 🎩 DESARROLLO
+### 💭 DESCRIPCIÓN
+
+Crear un programa que imprima en pantalla la suma de los primeros 100 números y que pueda ser ejecutado a través de un comando con Gradle.
 
 <details>
   <summary>Solución</summary>
+
+  Comenzaremos escribiendo la solución en Java que será crear un ciclo for desde 1 hasta 100 para ir sumando la variable de iteración:
+
+  ```java
+  public class SumOfFirst100Numbers {
+    public static void main(String [] args) {
+      int total = 0;
+      
+      for (int i = 1; i <= 100; i++) {
+        total += i;
+      }
+
+      System.out.println("La suma de los primeros 100 números es: " + total);
+    }
+  }
+  ```
+
+  A continuación crearemos el archivo `build.gradle` basado en la explicación del Ejemplo 04:
+
+  ```groovy
+  plugins {
+    id 'application'
+  }
+
+  application {
+    mainClass = "SumOfFirst100Numbers"
+  }
+  ```
+
+  Por último bastará con ejecutar el comando `gradle run` para ver el resultado en la terminal.
 </details>

@@ -4,7 +4,7 @@
 
 ### 🎯 OBJETIVO
 
-- Crear un archivo JAR a partir de un código Java usando Gradle
+- Compilar y generar un archivo JAR a partir de un código Java con Gradle
 
 ### 📃 REQUISITOS
 
@@ -12,7 +12,7 @@
 2. Tener un editor de código instalado en el equipo
 3. Tener acceso a la terminal del equipo
 
-### 💡 DESCRIPCIÓN
+### 💭 DESCRIPCIÓN
 
 Crear un programa en Java que convierta un número entero a binario, dicho programa deberá compilarse con Gradle.
 
@@ -28,7 +28,7 @@ Crear un programa en Java que convierta un número entero a binario, dicho progr
 
       String binary = Integer.toBinaryString(number);
 
-      System.out.println(binary);
+      System.out.println("El número entero " + number + " en binario es: " + binary);
     }
   }
   ```

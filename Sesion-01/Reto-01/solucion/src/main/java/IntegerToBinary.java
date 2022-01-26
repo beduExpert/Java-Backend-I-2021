@@ -4,6 +4,6 @@ public class IntegerToBinary {
 
     String binary = Integer.toBinaryString(number);
 
-    System.out.println(binary);
+    System.out.println("El número entero " + number + " en binario es: " + binary);
   }
 }
