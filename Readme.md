@@ -25,7 +25,7 @@ Adicionalmente deberás instalar un editor de código, puedes utilizar el que m�
 ### Organización del módulo
  
  - [Sesión 1](Sesion-01): Construcción de proyectos con Gradle
- - [Sesión 2](Sesion-02): ??
+ - [Sesión 2](Sesion-02): Patrones de Diseño
  - [Sesión 3](Sesion-03): ??
  - [Sesión 4](Sesion-04): ??
  - [Sesión 5](Sesion-05): ??

@@ -35,7 +35,7 @@ Debemos verificar que nuestro equipo tenga correctamente instalado **Java** y **
 
 *Nota: Usaremos la versión 7 de Gradle aunque puedes usar la más reciente.*
 
-### 🎩 Desarrollo
+### 🎩 Introducción
 
 Todo proyecto que utilice Gradle como herramienta de construcción debe tener un archivo llamado `gradle.build` el cual contiene las instrucciones necesarias (en lenguaje Groovy) para ejecutar **tareas** que ayuden a realizar alguna acción sobre código.
 
