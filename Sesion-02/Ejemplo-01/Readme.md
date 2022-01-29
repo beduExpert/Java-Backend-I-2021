@@ -18,9 +18,9 @@ Los patrones de diseño **creacionales** son aquellos que nos proponen solucione
 
 A continuación analizaremos uno de los patrones creacionales más importantes que es **Singleton**.
 
-El patrón **Singleton** resuelve dos problemas al mismo tiempo, vulnerando el Principio de responsabilidad única:
+El patrón **Singleton** resuelve un problema no tan común pero de suma importancia: *garantizar que una clase tenga una única instancia.* ¿Por qué querría alguien controlar cuántas instancias tiene una clase? El motivo más habitual es controlar el acceso a algún recurso compartido, por ejemplo, una base de datos o un archivo o bien evitar el consumo excesivo de memoria al momento de crear instancias de diferentes clases.
 
-Garantizar que una clase tenga una única instancia. ¿Por qué querría alguien controlar cuántas instancias tiene una clase? El motivo más habitual es controlar el acceso a algún recurso compartido, por ejemplo, una base de datos o un archivo.
+![](img/singleton-explanation.png)
 
 Funciona así: imagina que has creado un objeto y al cabo de un tiempo decides crear otro nuevo. En lugar de recibir un objeto nuevo, obtendrás el que ya habías creado.
 
@@ -31,6 +31,8 @@ Todas las implementaciones del patrón **Singleton** tienen estos dos pasos en c
 - Hacer privado el constructor por defecto para evitar que otros objetos utilicen el operador new con la clase **Singleton**.
 - Crear un método de creación estático que actúe como constructor. Tras bambalinas, este método invoca al constructor privado para crear un objeto y lo guarda en un campo estático. Las siguientes llamadas a este método devuelven el objeto almacenado en caché.
 - Si tu código tiene acceso a la clase **Singleton**, podrá invocar su método estático. De esta manera, cada vez que se invoque este método, siempre se devolverá el mismo objeto.
+
+![](img/singleton-comic.png)
 
 A continuación tenemos su implementación en Java:
 
@@ -71,7 +73,7 @@ public class PruebaSingleton {
 }
 ```
 
-Por último creamos el archivo `build.gradle` para compilar y ejecutar el código:
+> 💡 *Nota: Recuerda que todos los ejemplos y retos de esta sesión utilizarán la misma configuración de Gradle, cambiando únicamente la clase principal del proyecto*
 
 ```groovy
 plugins {
@@ -82,5 +84,3 @@ application {
   mainClass = "PruebaSingleton"
 }
 ```
-
-Finalmente ejecutamos el comando `gradle run` y verificaremos que la salida del programa es la repetición de la palabra "FOO".
