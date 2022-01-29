@@ -3,5 +3,5 @@ plugins {
 }
 
 application {
-  mainClass = "PruebaAdapter"
+  mainClass = "Application"
 }

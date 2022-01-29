@@ -14,9 +14,23 @@
 
 ### 🎩 DESARROLLO
 
-Los patrones de diseño **creacionales** son aquellos que nos proponen soluciones para problemas relacionados con la instanciación de objetos. Automatizar el proceso de construcción de un objeto complejo, limitar la instanciación de una clase a un único objeto al que se pueda acceder de manera global o usar un objeto como prototipo para crear otros objetos similares son algunos de los usos de los patrones de diseño creacionales.
+Los patrones creacionales son aquellos que nos proponen soluciones para problemas relacionados con la instanciación de objetos. Automatizar el proceso de construcción de un objeto complejo, limitar la instanciación de una clase a un único objeto al que se pueda acceder de manera global o usar un objeto como prototipo para crear otros objetos similares son algunos de los usos de los patrones creacionales.
 
-A continuación analizaremos uno de los patrones creacionales más importantes que es **Singleton**.
+Los patrones creacionales son:
+
+- **Abstract Factory:** Nos provee una interfaz que delega la creación de un conjunto de objetos relacionados sin necesidad de especificar en ningún momento cuáles son las implementaciones concretas.
+
+- **Factory Method:** Expone un método de creación,  delegando en las subclases la implementación de este método.
+
+- **Builder:** Separa la creación de un objeto complejo de su estructura, de tal forma que el mismo proceso de construcción nos puede servir para crear representaciones diferentes.
+
+- **Singleton:** limita a uno el número de instancias posibles de una clase en nuestro programa, y proporciona un acceso global al mismo.
+
+- **Prototype:** Permite la creación de objetos basados en “plantillas”. Un nuevo objeto se crea a partir de la clonación de otro objeto.
+
+Para este ejemplo analizaremos el patrón **Singleton**.
+
+#### Definición
 
 El patrón **Singleton** resuelve un problema no tan común pero de suma importancia: *garantizar que una clase tenga una única instancia.* ¿Por qué querría alguien controlar cuántas instancias tiene una clase? El motivo más habitual es controlar el acceso a algún recurso compartido, por ejemplo, una base de datos o un archivo o bien evitar el consumo excesivo de memoria al momento de crear instancias de diferentes clases.
 
@@ -29,12 +43,14 @@ Ten en cuenta que este comportamiento es imposible de implementar con un constru
 Todas las implementaciones del patrón **Singleton** tienen estos dos pasos en común:
 
 - Hacer privado el constructor por defecto para evitar que otros objetos utilicen el operador new con la clase **Singleton**.
+
 - Crear un método de creación estático que actúe como constructor. Tras bambalinas, este método invoca al constructor privado para crear un objeto y lo guarda en un campo estático. Las siguientes llamadas a este método devuelven el objeto almacenado en caché.
+
 - Si tu código tiene acceso a la clase **Singleton**, podrá invocar su método estático. De esta manera, cada vez que se invoque este método, siempre se devolverá el mismo objeto.
 
 ![](img/singleton-comic.png)
 
-A continuación tenemos su implementación en Java:
+#### Implementación
 
 ```java
 public class Singleton {
@@ -61,7 +77,7 @@ Con dicha implementación garantizamos que al momento de llamar el método está
 Ahora implementamos una clase que utilice nuestra implementación de Singleton para verificar su funcionamiento:
 
 ```java
-public class PruebaSingleton {
+public class Application {
 
   public static void main(String[] args) {
     Singleton singleton = Singleton.getInstance("FOO");
@@ -81,6 +97,6 @@ plugins {
 }
 
 application {
-  mainClass = "PruebaSingleton"
+  mainClass = "Application"
 }
 ```
