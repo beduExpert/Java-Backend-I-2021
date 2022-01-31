@@ -5,7 +5,3 @@ plugins {
 application {
   mainClass = "Application"
 }
-
-run {
-    standardInput = System.in
-}
