@@ -56,7 +56,7 @@ Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso 
 - Compilación y ejecución de aplicaciones Java
 
 	- [Ejemplo 04](Ejemplo-04)
-	- [Reto 02](Reto-03)
+	- [Reto 02](Reto-02)
 
 - **POSTWORK**
  
