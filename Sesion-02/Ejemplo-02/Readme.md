@@ -67,3 +67,100 @@ En ocasiones se puede incluso crear un adaptador de dos direcciones que pueda co
 
 #### Implementación
 
+Comenzamos con nuestras clases iniciales, la primera obtiene la información de la bolsa de valores en formato XML y la segunda procesa la información en formato JSON:
+
+```java
+public interface StockMarketReport {
+  public String download();
+}
+```
+
+```java
+public class StockMarket implements StockMarketReport {
+
+  @Override
+  public String download() {
+    String xml = "";
+
+    // Proceso para convertir la información a XML...
+    System.out.println("Descargando información en formato XML...");
+
+    return xml;
+  }
+}
+```
+
+```java
+public class AnalysisLibrary {
+
+  public void analyzeInformation(String json) throws Exception {
+    if (!validateJSON(json)) {
+      throw new Exception("La información no tiene formato JSON");
+    }
+
+    // Procesa la información obtenida en JSON
+    System.out.println("Procesando la información...");
+  }
+
+  public boolean validateJSON(String data) {
+    // Valida si la información llega en formato JSON
+
+    return true;
+  }
+}
+```
+
+Como podemos ver ambas clases son totalmente incompatibles, por lo tanto creamos nuestra clase `StockMarketAdapter`:
+
+```java
+public class StockMarketAdapter implements StockMarketReport {
+
+  private StockMarket stockMarket;
+
+  public StockMarketAdapter() {
+    stockMarket = new StockMarket();
+  }
+
+  @Override
+  public String download() {
+    String xml = stockMarket.download();
+    return convertToJson(xml);
+  }
+
+  public String convertToJson(String xml) {
+    String json = "";
+
+    // Proceso para convertir de XML a JSON
+    System.out.println("Convirtiendo la información de XML a JSON...");
+
+    return json;
+  }
+}
+```
+
+Por último creamos una clase que nos permita probar nuestro código:
+
+```java
+public class Application {
+
+  public static void main(String [] args) throws Exception {
+    StockMarketReport report = new StockMarketAdapter();
+    String json = report.download();
+
+    AnalysisLibrary library = new AnalysisLibrary();
+    library.analyzeInformation(json);
+  }
+}
+```
+
+> 💡 *Nota: Recuerda que todos los ejemplos y retos de esta sesión utilizarán la misma configuración de Gradle, cambiando únicamente la clase principal del proyecto*
+
+```groovy
+plugins {
+  id 'application'
+}
+
+application {
+  mainClass = "Application"
+}
+```
