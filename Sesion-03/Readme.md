@@ -57,7 +57,6 @@ En Java existen varios frameworks para realizar pruebas unitarias. El más ampli
 - Suites de pruebas
 
 	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
   
 
 - **POSTWORK**
