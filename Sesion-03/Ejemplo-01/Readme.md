@@ -9,7 +9,8 @@
 ### 📃 REQUISITOS
 
 1. Tener **Gradle** instalado en el equipo
-2. Tener un entorno de desarrolla (IDE) instalado en el equipo
+1. Tener instalado el JDK versión 11 o superior.
+1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
 
 ### 🎩 DESARROLLO
 
@@ -103,7 +104,7 @@ class CalculadoraTest {
 ```
 
 
-Ejecuta la prueba haciendo clic derecho sobre el editor de código y seleccionando la opción `Run CalculadoraServiceTest` o haciendo clic sobre las dos flechas verdes que aparecen junto al nombre de la clase:
+Ejecuta la prueba haciendo clic derecho sobre el editor de código y seleccionando la opción `Run CalculadoraTest` o haciendo clic sobre las dos flechas verdes que aparecen junto al nombre de la clase:
 
 ![imagen](img/img_01.png)
 
