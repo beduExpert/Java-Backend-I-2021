@@ -57,7 +57,7 @@ public class MathApplication {
 
 ```
 
-Al revisar la implementación te das cuenta de que hay algo mal con la aplicación anterior; tu auqnue no tienes dudas, tampoco tienes pruebas de esto. Se lo comunicas al cliente pero él confía en que el trabajo que le entregaron es correcto y que si algo está fallando debe ser porque no estuvo definido dentro de tu interface. Tu labor en este reto consistirá en realizar una prueba sobre la clase anterior y demostrar que en su implementación no en todos los casos se usa la interface que definiste, para eso deberás crear un doble de pruebas de `CalculatorService` y verificar si efectivamente hace uso de esta para todas las operaciones.
+Al revisar la implementación te das cuenta de que hay algo mal con la aplicación anterior; tu aunque no tienes dudas, tampoco tienes pruebas de esto. Se lo comunicas al cliente pero él confía en que el trabajo que le entregaron es correcto y que si algo está fallando debe ser porque no estuvo definido dentro de tu interface. Tu labor en este reto consistirá en realizar una prueba sobre la clase anterior y demostrar que en su implementación no en todos los casos se usa la interface que definiste, para eso deberás crear un doble de pruebas de `CalculatorService` y verificar si efectivamente hace uso de esta para todas las operaciones.
 
 ¡Buena suerte!
 
@@ -113,11 +113,11 @@ Por último, se ejecutará el método `add` de `mathApplication` y se verificar�
     }
 ```
 
-El último paso es ejecutar la prueba y comprobar si efectívamente, y como efecto de las desveladas, olvidaste agregar un método para suma en tu interface o si por el contrario los ingenieros del MIT decidieron tomar un atajo para terminar antes su trabajo. Respiras profundo y con tu mano temblorosa ejecutas la prueba y observas que el resultado es.... un error, pero, ¿en dónde?
+El último paso es ejecutar la prueba y comprobar si efectivamente, y como efecto de las desveladas, olvidaste agregar un método para suma en tu interface o si por el contrario los ingenieros del MIT decidieron tomar un atajo para terminar antes su trabajo. Respiras profundo y con tu mano temblorosa ejecutas la prueba y observas que el resultado es.... un error, pero, ¿en dónde?
 
 ![imagen](img/img_01.png)
 
-Al revisar la salida de la consola te deas cuenta de que, efectivamente, no usaron el método que defniste (y que como está en el doble de prueba de `CalculadoraService` puedes demostrar que sí lo definiste). Así que ya tienes las pruebas. Recuperas la confianza del cliente y este te da lo último del prespuesto (y que olvidó que tenía) para que arregles el error en la implementación anterior y logren liberar finalmente el servicio.
+Al revisar la salida de la consola te das cuenta de que, efectivamente, no usaron el método que definiste (y que como está en el doble de prueba de `CalculadoraService` puedes demostrar que sí lo definiste). Así que ya tienes las pruebas. Recuperas la confianza del cliente y este te da lo último del presupuesto (y que olvidó que tenía) para que arregles el error en la implementación anterior y logren liberar finalmente el servicio.
 
 
 </details>

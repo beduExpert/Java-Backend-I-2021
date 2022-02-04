@@ -14,13 +14,13 @@
 
 ### 🎩 DESARROLLO
 
-JUnit es uno de los frameworks de pruebas más populares en el ecosistema de la tecnología Java. La versión 5 de JUnit contiene muchas características útiles que nos ayudan a cumplit con el objetivo de desarrollar muchos tipos distintos de pruebas unitarias y de integración. 
+JUnit es uno de los frameworks de pruebas más populares en el ecosistema de la tecnología Java. La versión 5 de JUnit contiene muchas características útiles que nos ayudan a cumplir con el objetivo de desarrollar muchos tipos distintos de pruebas unitarias y de integración. 
 
 #### Arquitectura
 
 JUnit 5 está compuesto por una variedad de módulos diferentes divididos en tres módulos:
 
-- **JUnit Platform**: La plataforma es el módulo responsable de ejecutar las pruebas en la JVM. Define una serie de interfaces poderosas entre JUnit y sus clientes, como las herramientas de complilación (Gradle, Maven) o los IDEs.
+- **JUnit Platform**: La plataforma es el módulo responsable de ejecutar las pruebas en la JVM. Define una serie de interfaces poderosas entre JUnit y sus clientes, como las herramientas de compilación (Gradle, Maven) o los IDEs.
 - **JUnit Jupiter**: Es el módulo que contiene los modelos y extensiones de JUnit. Este será el módulo que usaremos para escribir nuestras pruebas.
 - **JUnit Vintage**: Soporta la ejecución de pruebas basadas en JUnit 3 y 4 dentro de un entorno JUnit 5. Sirve mucho para cuando tenemos aplicaciones o código legado.
 
@@ -28,15 +28,15 @@ JUnit 5 está compuesto por una variedad de módulos diferentes divididos en tre
 
 - `@Test`: Esta es la anotación que más usarás de JUnit. Indica que un método debe tratarse como un caso de una prueba unitaria. JUnit ejecuta todos los métodos habilitados que contengan esta anotación.
 - `@Disabled`: Indica que un caso de prueba particular debe ignorarse, y por lo tanto no se ejecutará.
-- `@BeforeEach`: Indica que el método antotado será ejecutado antes de cada uno de los métodos de prueba. Se usa cuando queremos inicializar y reinicializar información o configuración antes de cada prueba.
-- `@AfterEach`: Indica que el método anotado se ejecutará después de cada uno de los métodos de prueba. Se usa cuando queremos limpiar o liberar algún recurso despúes de cada prueba.
-- `@BeforeAll`: Inica que el método anotado se ejecutará antes de ejecutar los métodos de prueba. Se ejecuta una sola vez durante toda la prueba.
+- `@BeforeEach`: Indica que el método anotado será ejecutado antes de cada uno de los métodos de prueba. Se usa cuando queremos inicializar y reinicializar información o configuración antes de cada prueba.
+- `@AfterEach`: Indica que el método anotado se ejecutará después de cada uno de los métodos de prueba. Se usa cuando queremos limpiar o liberar algún recurso después de cada prueba.
+- `@BeforeAll`: Indica que el método anotado se ejecutará antes de ejecutar los métodos de prueba. Se ejecuta una sola vez durante toda la prueba.
 - `@AfterAll`: Indica que el método anotado se ejecutará después de que se haya terminado la ejecución de todos los métodos de prueba. Se ejecuta una solo vez durante toda la prueba.
 
 
 #### Implementación
 
-Lo primero que debemos hacer es incluir la dependencia de JUnit en nuestro proyecto. Esto lo hacemos colocando la siguiente línea en el archivo `build.gradle`, las cuales indican que debemos usar la dependencia de Junit jupiter solo en la etapa de pruebas:
+Lo primero que debemos hacer es incluir la dependencia de JUnit en nuestro proyecto. Esto lo hacemos colocando la siguiente línea en el archivo `build.gradle`, las cuales indican que debemos usar la dependencia de Junit Jupiter solo en la etapa de pruebas:
 
 ```groovy
 dependencies {

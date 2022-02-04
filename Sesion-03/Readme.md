@@ -4,16 +4,16 @@
 
 ### 🎯 Objetivo de la sesión
 
-- Identificar qué son las anotaciones en Java
-- Distinguir los distintos usos de las anotaciones
+- Distinguir los distintos usos de las anotaciones en las pruebas con JUnit y Mockito.
 - Identificar qué es JUnit
-- Distinguir la importancia de las pruebas unitarias
+- Aprender a crear dobles de prueba con Mockito.
 
 
 ### ⚙ Configuración
 
 - Gradle
-- Editor de código
+- JDK versión 11 o superior.
+- Entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
 
 ### 🎯 Qué aprenderán
 

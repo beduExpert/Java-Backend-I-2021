@@ -4,7 +4,7 @@
 
 ### 🎯 OBJETIVO
 
-- Realizar una prueba unitaria que se encargue de validar que al momento de validar una funcionalidad, se lanza la exepción esperada.
+- Realizar una prueba unitaria que se encargue de validar que al momento de validar una funcionalidad, se lanza la excepción esperada.
 
 ### 📃 REQUISITOS
 
@@ -14,7 +14,7 @@
 
 ### 💭 DESCRIPCIÓN
 
-Al momento de mostrar una demo de nuestra calculadora al cliente, este quedó maravillado de su correcto funcionamiento y la ejecución correcta de todas las oepraciones que nos pidió realizar durante la demo. Sin embargo, notó que al momento de realizar la implementación de la calculadora omitimos una operación que para él es escencial en sus operaciones diarias: la división. Tu reto será arreglar este terrible error que hemos cometido al entregar una aplicación incompleta al cliente.
+Al momento de mostrar una demo de nuestra calculadora al cliente, este quedó maravillado de su correcto funcionamiento y la ejecución correcta de todas las operaciones que nos pidió realizar durante la demo. Sin embargo, notó que al momento de realizar la implementación de la calculadora omitimos una operación que para él es esencial en sus operaciones diarias: la división. Tu reto será arreglar este terrible error que hemos cometido al entregar una aplicación incompleta al cliente.
 
 La división es una de las cuatro operaciones básicas de la aritmética que consiste en averiguar cuántas veces un número (divisor) está contenido en otro número (dividendo). Sin embargo, y a diferencia de las otras tres operaciones, la división presenta una complicación. Existe un valor que podemos asignar al divisor y que causa que la división explote al encontrar una singularidad espacial en un punto importante el cual podemos ver en la siguiente imagen:
 
@@ -23,7 +23,7 @@ La división es una de las cuatro operaciones básicas de la aritmética que con
 
 En matemáticas, la división entre cero es una división en la que el divisor es igual a cero, y que no tiene un resultado bien definido. En aritmética y álgebra, es considerada una *indefinición*, y su mal uso puede dar lugar a aparentes paradojas matemáticas.
 
-Como queremos evitarle molestias a nuestro cliente y demostrarle que nuestra calculadora está preparada para todas los posibles valores que le ingresemos debes validar, en una prueba unitaria desarrollada usando JUnit, que si intentamos realizar una división entre cero se lanzará una execpción de tipo "IllegalArgumentException" con el mensaje mostrado a continuación:
+Como queremos evitarle molestias a nuestro cliente y demostrarle que nuestra calculadora está preparada para todos los posibles valores que le ingresemos debes validar, en una prueba unitaria desarrollada usando JUnit, que si intentamos realizar una división entre cero se lanzará una excepción de tipo "IllegalArgumentException" con el mensaje mostrado a continuación:
 
 
 ```java
@@ -88,7 +88,7 @@ La segunda forma de implementar la solución nos permite usar una versión sobre
     }
 ```
 
-Al ejecutar la pryueba anterior debes obtener el siguiente mensaje indicando que la prueba fue satisfactoria y que el cliente finalmente nos pagará por nuestra aplicación:
+Al ejecutar la prueba anterior debes obtener el siguiente mensaje indicando que la prueba fue satisfactoria y que el cliente finalmente nos pagará por nuestra aplicación:
 
 ![imagen](img/img_02.png)
 

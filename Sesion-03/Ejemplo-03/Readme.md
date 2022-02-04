@@ -4,7 +4,7 @@
 
 ### 🎯 OBJETIVO
 
-- Crear una conjunto de pruebas que agrupe clases de pruebas para asegurar que estas se ejecutarán siempre juntas
+- Crear un conjunto de pruebas que agrupe clases de pruebas para asegurar que estas se ejecutarán siempre juntas
 
 
 ### 📃 REQUISITOS
