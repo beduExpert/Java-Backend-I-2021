@@ -4,8 +4,7 @@
 
 ### 🎯 OBJETIVO
 
-- Crear una prueba que valide el correcto funcionamiento de una clase o componente.
-- Simular el funcionamiento de una clase que aún no existe, usando un mock creado con Mockito.
+- Crear una conjunto de pruebas que agrupe clases de pruebas para asegurar que estas se ejecutarán siempre juntas
 
 
 ### 📃 REQUISITOS
@@ -131,8 +130,7 @@ class CalculadoraTest {
 
 ```
 
-
-Ejecuta la prueba haciendo clic derecho sobre el editor de código y seleccionando la opción `Run CalculadoraTest` o haciendo clic sobre las dos flechas verdes que aparecen junto al nombre de la clase:
+El último paso consiste en ejecutar la prueba haciendo clic derecho sobre el editor de código y seleccionando la opción `Run CalculadoraTest` o haciendo clic sobre las dos flechas verdes que aparecen junto al nombre de la clase:
 
 ![imagen](img/img_01.png)
 
