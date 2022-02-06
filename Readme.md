@@ -12,11 +12,7 @@ Para poder trabajar en las sesiones deberás instalar **Gradle** en tu equipo.
 
 <img src="gradle.png" alt="Gradle" width="200"/>
 
-Adicionalmente deberás instalar un editor de código, puedes utilizar el que más te guste aunque te recomendamos **Visual Studio Code** o bien **IntelliJ IDEA**.
-
-### [Descargar Visual Studio Code](https://code.visualstudio.com)
-
-<img src="code.png" alt="Visual Studio Code" width="200"/>
+Adicionalmente deberás instalar un editor de código, puedes utilizar el que más te guste aunque te recomendamos **IntelliJ IDEA Community Edition**.
 
 ### [Descargar IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
@@ -27,7 +23,7 @@ Adicionalmente deberás instalar un editor de código, puedes utilizar el que m�
  - [Sesión 1](Sesion-01): Construcción de proyectos con Gradle
  - [Sesión 2](Sesion-02): Patrones de diseño
  - [Sesión 3](Sesion-03): Anotaciones y pruebas unitarias con JUnit
- - [Sesión 4](Sesion-04): ??
+ - [Sesión 4](Sesion-04): Introducción a Spring Boot
  - [Sesión 5](Sesion-05): ??
  - [Sesión 6](Sesion-06): ??
  - [Sesión 7](Sesion-07): ??
