@@ -1,6 +1,6 @@
 `Desarrollo Web` > `BackEnd Básico Java`
 
-## 🧠 Ejemplo 01: Pruebas unitarias con JUnit 
+## 🧠 Ejemplo 01: Proyecto Gradle con Spring Initializr
 
 ### 🎯 OBJETIVO
 
