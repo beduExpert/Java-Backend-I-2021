@@ -135,16 +135,12 @@ Dependiendo de tu navegador y de los plugins que tengas instalado, podrías ver 
 
 Esto quiere decir que la aplicación ha funcionado de forma correcta.
 
-Ahora, consumiremos el servicio usando *Postman*, el cual es una herrmienta cuya finalidad principal es consumir servicios REST. Al abrir Postman debes ver una ventana similar a la siguiente:
+Ahora, consumiremos el servicio usando *Postman. Al abrir Postman debes ver una ventana similar a la siguiente:
 
 ![imagen](img/img_08.png)
 
-Haz clic en la opción *Create a basic request*:
+Haz clic en la opción *Create a basic request*. En la siguiente ventana coloca la misma URL de la petición que usaste en el navegador y presiona el botón `Send`. Una vez que recibas la respuesta, debes ver una salida similar en el panel de respuestas:
 
 ![imagen](img/img_09.png)
-
-En la siguiente ventana coloca la misma URL de la petición que usaste en el navegador y presiona el botón `Send`. Una vez que recibas la respuesta, debes ver una salida similar en el panel de respuestas:
-
-![imagen](img/img_10.png)
 
 </details>
