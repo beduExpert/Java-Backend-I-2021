@@ -1,6 +1,6 @@
 `Desarrollo Web` > `BackEnd Básico Java`
 
-## 💪 Postwork: Pruebas dinámicas
+## 💪 Postwork: Aplicación de línea de comandos
 
 ### 🎯 OBJETIVO
 
