@@ -53,7 +53,7 @@ public class SolucionApplication implements CommandLineRunner {
 }
 ```
 
-Esta interface contiene solo un método 
+`CommandLineRunner` contiene un solo método el cual se ejecuta al momento de iniciar la aplicación. Es dentro de este método donde deberás colocar el código de la aplicación.
 
 ```java
 @Override
@@ -62,7 +62,7 @@ public void run(String... args) throws Exception {
 }
 ```
 
-Este se ejecutará de forma automática al momento de iniciar la aplicación. Coloca el siguiente código detro de la clase:
+En el cuerpo de `run` usa una instancia de `Scanner` para leer la entrada que el usaurio proporcione a través de la entrada estándar (el teclado). Aquí deberás leer el texto introducido y luego recorrerlo para encontrar las vocales.
 
 ```java
 @SpringBootApplication
@@ -76,30 +76,34 @@ public class SolucionApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("Introduce la palabra");
-        String palabra = reader.next();
+        System.out.println("Introduce la palabra: ");
+        String palabra = reader.nextLine();
 
         System.out.println(cuentaVocales(palabra));
-    }
-
-    public static int cuentaVocales(String palabra)
-    {
-        int count = 0;
-        for (int i = 0; i < palabra.length(); i++)
-        {
-            if (palabra.charAt(i) == 'a' || palabra.charAt(i) == 'e' || palabra.charAt(i) == 'i'
-                    || palabra.charAt(i) == 'o' || palabra.charAt(i) == 'u')
-            {
-                count++;
-            }
-        }
-        return count;
     }
 }
 
 ```
 
-Ejecuta la aplicación, debes obtener una salida como la siguiente al escribir la palabra en la consola del IDE:
+Ahora implementa el método `cuentaVocales`. Puedes hacerlo tan complejo como quieras. Este es un ejemplo:
+
+```java
+  public static int cuentaVocales(String palabra) {
+        int vocales = 0;
+        for (int i = 0; i < palabra.length(); i++) {
+            if (palabra.charAt(i) == 'a' ||
+                    palabra.charAt(i) == 'e' ||
+                    palabra.charAt(i) == 'i' ||
+                    palabra.charAt(i) == 'o' ||
+                    palabra.charAt(i) == 'u') {
+                vocales++;
+            }
+        }
+        return vocales;
+    }
+```
+
+Ejecuta la aplicación. Si lo haces desde IntelliJ Idea deberás hacer click en la consola y comenzar a escribir:
 
 
 ![imagen](img/img_03.png)

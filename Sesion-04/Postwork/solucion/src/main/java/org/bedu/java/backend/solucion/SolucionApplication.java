@@ -17,20 +17,23 @@ public class SolucionApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("Introduce la palabra");
-        String palabra = reader.next();
+        System.out.println("Introduce la palabra: ");
+        String palabra = reader.nextLine();
 
         System.out.println(cuentaVocales(palabra));
     }
 
     public static int cuentaVocales(String palabra) {
-        int count = 0;
+        int vocales = 0;
         for (int i = 0; i < palabra.length(); i++) {
-            if (palabra.charAt(i) == 'a' || palabra.charAt(i) == 'e' || palabra.charAt(i) == 'i'
-                    || palabra.charAt(i) == 'o' || palabra.charAt(i) == 'u') {
-                count++;
+            if (palabra.charAt(i) == 'a' ||
+                    palabra.charAt(i) == 'e' ||
+                    palabra.charAt(i) == 'i' ||
+                    palabra.charAt(i) == 'o' ||
+                    palabra.charAt(i) == 'u') {
+                vocales++;
             }
         }
-        return count;
+        return vocales;
     }
 }
