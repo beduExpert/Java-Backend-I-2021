@@ -64,4 +64,4 @@ Para el desarrollo backend utilizando tecnología Java, existen varias herramien
 
 - **POSTWORK**
  
-  - [Pruebas Dinámicas](Postwork)
+  - [Aplicación de consola](Postwork)
