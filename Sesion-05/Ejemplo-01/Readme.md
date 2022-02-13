@@ -17,7 +17,7 @@ Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguient
   - Forma de empaquetar la aplicación: **jar**.
   - Versión de Java: **11** o superior.
 
-![](img/img_01.png)
+![](img/img_001.png)
 
 No selecciones ninguna dependencia, no las necesitaremos en este ejemplo.
 
@@ -25,7 +25,7 @@ Presiona el botón "Finish".
 
 Ahora, crea dos paquetes dentro de la estructura creada por IntelliJ. El primer paquete se llamará `model` y el segundo `config`:
 
-![](img/img_02.png)
+![](img/img_002.png)
 
 Dentro del paquete `model` crea una nueva clase llamada `Saludo`. Esta representa al Bean que inyectaremos más adelante en este ejemplo:
 
@@ -123,7 +123,7 @@ private Saludo saludo;
 
 Si ahora ejecutamos la aplicación, debemos obtener la siguiente salida en la consola:
 
-![](img/img_03.png)
+![](img/img_003.png)
 
 La primera forma funciona, pero no es recomendada. El problema es que el atributo `Saludo` tiene un nivel de acceso `private` (lo cual sigue las mejores prácticas de la encapsulación), esto quiere decir que Spring debe primero modificar el nivel de acceso de este atributo, inyectar el valor, y luego volver a regresar su nivel de acceso original. Esto, además de que es un problema potencial de seguridad, también hace que la inicialización se más lenta.
 
@@ -140,7 +140,7 @@ Veamos la segunda forma de indicar a Spring que inyecte la instancia. Para esto,
 
 Si ejecutamos nuevamente la aplicación, debemos ver la misma salida en la consola. 
 
-![](img/img_03.png)
+![](img/img_003.png)
 
 Esta segunda forma es mucho mejor que la primera, ya que permitimos que Spring haga uso del `setter` correspondiente para inyectar la instancia, y de esta forma no se mete con los modificadores de acceso que estemos usando. Sin embargo, hay un problema, ya que ahora permitimos que alguna otra clase modifique en cualquier momento la instancia de `Saludo` que estamos usando. Esto, en algunos casos, puede ser algo que estemos buscando, pero en la mayoría de las ocasiones buscamos asegurar que siempre usemos una misma única instancia, y que una vez que esta se ha inyectado no sea modificado. 
 
@@ -174,5 +174,7 @@ Gracias a esto ahora podemos declarar la instancia de `Saludo` como `final`, y d
 ```
 
 Si volvemos a ejecutar la aplicación, veremos que obtenemos la misma salida.
+
+![](img/img_003.png)
 
 Esta tercera forma es la recomandada para inyectar los Beans dentro de las distintas clases de nuestra aplicación.
