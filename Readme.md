@@ -41,8 +41,8 @@ Además, usaremos uno de los mejores IDE (Integrated Develoment Environment) del
 |    1   | [Construcción de proyectos con Gradle](./Sesion-01)          | ¿Qué es Gradle y cómo lo uso para desarrollar proyectos?          |
 |    2   | [Patrones de diseño](./Sesion-02)                            | Entender los patrones de diseño básicos para trabajar con Spring. |
 |    3   | [Anotaciones y pruebas unitarias con JUnit](./Sesion-03)     | Desarrollo de pruebas para garantizar el funcionamiento de mi app.|
-|    4   | [Introducción a Spring Boot](./Sesion-04)                    | Introducción y primeros pasos de este módulo de Spring-           |
-|    5   | [Sesión 5](./Sesion-05)                       | ?? |
+|    4   | [Introducción a Spring Boot](./Sesion-04)                    | Introducción y primeros pasos de este módulo de Spring.           |
+|    5   | [Java Beans y la Inversión de Control](./Sesion-05)          | Usar Spring como motor de inyección de dependencias.              |
 |    6   | [Sesión 6](./Sesion-06)              | ??                      |
 |    7   | [Sesión 7](./Sesion-07)                               | ??                           |
 |    8   | [Sesión 8](./Sesion-08)     | ??                       |
