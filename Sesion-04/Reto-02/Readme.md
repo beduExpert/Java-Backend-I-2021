@@ -1,23 +1,12 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 02: Controladores con Spring MVC con parámetros
 
-## 💪 Reto 02: Controladores con Spring MVC con parámetros
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender la forma de crear controladores de Spring usando su módulo web (Spring MVC) y recibir un parámetro.
 - Crear un servicio REST que regrese un recurso dinámico.
 - Consumir el servicio usando un navegador Web y con Postman.
 
-
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition.
-1. Tener Postman instalado en el equipo.
-
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 En el ejemplo anterior creamos un controlador que regresaba un mensaje estático predeterminado, lo que quiere decir que no importa cuantas veces llamemos al recurso siempre recibimos la misma respuesta. 
 

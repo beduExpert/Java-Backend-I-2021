@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
-
-## 💪 Postwork: Aplicación de línea de comandos
+## Sesión 4: Aplicación de línea de comandos
 
 ### 🎯 OBJETIVO
 
 - Implementar una aplicación de línea de comandos utilizando Spring Boot
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Dentro de las muchas bondades con las que cuenta en Framework de Spring, y en particular Spring Boot, se encuentra la opción de poder ejecutar comandos al momento de iniciar la aplicación. Gracias a esto puedes proporcionar algunas instrucciones, rutas, o valores particulares a tu aplicación.
 

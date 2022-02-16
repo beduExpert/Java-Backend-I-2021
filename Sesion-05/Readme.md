@@ -13,7 +13,7 @@
 
 El Core de Spring (su módulo principal) es un poderoso mecanismo de inyección de dependencias, el cual es una de las formas principales de inversión de control. Como desarrolladores debemos colocar algunas anotaciones básicas para indicarle a Spring el uso que le daremos a un *Bean* o componente de nuestra aplicación, y Spring se encargará de crear una instancia de este componente e inyectarlo en todos los lugares en los que lo usemos. De esta forma, no nos preocupamos por la manera en la que el *Bean* es creado, inicializado y en como llega a las clases en donde se necesitan. 
 
-Al librarnos de los mecanismos de *cableado* de los elementos entre nuestras distintas clases, logramos cenmtrarnos más en la lógica de negocio que debemos resolver. Además, esto trae un beneficio adicional: Si deseamos cambiar la implementación de un *Bean* por otra equivalente, podemos hacerlo sin ningún esfuerzo y sin reescribir o modificar todas las partes de nuestra aplicación en la que se usa ese componente; dejamos que sea Spring quien se encarga de eso.
+Al librarnos de los mecanismos de *cableado* de los elementos entre nuestras distintas clases, logramos centrarnos más en la lógica de negocio que debemos resolver. Además, esto trae un beneficio adicional: Si deseamos cambiar la implementación de un *Bean* por otra equivalente, podemos hacerlo sin ningún esfuerzo y sin reescribir o modificar todas las partes de nuestra aplicación en la que se usa ese componente; dejamos que sea Spring quien se encarga de eso.
 
 En este módulo aprenderemos:
 
@@ -46,7 +46,6 @@ Si bien es posible inicializar y configurar los *Beans* de forma explícita (y e
 
 - [**`EJEMPLO 2`**](./Ejemplo-02)
 - [**`Reto 1`**](./Reto-01)
-
 
 ---
 

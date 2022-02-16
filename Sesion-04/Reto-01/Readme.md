@@ -1,19 +1,11 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 01: Proyecto Spring Boot desde IntelliJ Idea
 
-## 💪 Reto 01: Proyecto Spring Boot desde IntelliJ Idea
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear un proyecto Maven usando Spring Initializr desde IntelliJ Idea.
 - Compilar, empaquetar y ejecutar la aplicación o proyecto generados desde el IDE.
 
-
-### 📃 REQUISITOS
-
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener Idea Community Edition instalado en el equipo.
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 La ventaja que nos ofrece un Entorno de desarrollo integrado, IDE por sus siglas en inglés, como IntelliJ Idea es que combina en una sola herramienta todas las opciones que necesitamos para la creación de proyectos de cualquier framework que soporte el lenguaje de programación Java. Dentro de esta enorme lista se encuentra Spring Boot que, como viste en el primer ejercicio, permite el desarrollo de aplicaciones web de una forma muy sencilla.
 

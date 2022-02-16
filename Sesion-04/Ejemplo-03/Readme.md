@@ -1,21 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 03: Método POST para creación y actualización de información
 
-## 🧠 Ejemplo 03: Método POST para creación y actualización de información
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender la forma en la que Spring MVC permite recibir objetos complejos (objetos con múltiples atributos de varios tipos)
 
-
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-1. Tener instalada la herrramienta Postman en el equipo.
-
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 REST (Representational State Transfer) es un conjunto de principios que indican una forma de programar servicios web que aprovechan al máximo las características del protocolo HTTP.    
 

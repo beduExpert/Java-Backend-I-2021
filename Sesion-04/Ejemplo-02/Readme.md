@@ -1,22 +1,12 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 02: Controladores de lectura con Spring MVC
 
-## 🧠 Ejemplo 02: Controladores de lectura con Spring MVC
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender la forma de crear controladores de Spring usando su módulo web (Spring MVC).
 - Crear un primer servicio REST que regrese un recurso estático.
 - Consumir el servicio usando un navegador Web y con Postman.
 
-
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-1. Tener instalada la herramienta Postman.
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Una API utiliza ciertos protocolos para permitir la comunicación entre aplicaciones programadas en diferentes lenguajes de programación. Bien, acá es donde entran los servicios web, una tecnología que utiliza un conjunto de estándares y protocolos para intercambiar datos entre aplicaciones. En este sentido tenemos dos términos que usualmente son utilizados como sinónimos: REST y RESTful, estos definen características y/o principios de diseño que se deben seguir para programar servicios web.
 

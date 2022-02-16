@@ -1,18 +1,11 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 01: Proyecto Gradle con Spring Initializr
 
-## 🧠 Ejemplo 01: Proyecto Gradle con Spring Initializr
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear un proyecto Gradle usando Spring Initializr.
 - Compilar, empaquetar y ejecutar la aplicación o proyecto generados desde la línea de comandos.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Spring Initializr es un portal que se encarga de generar, de forma automática, los archivos necesarios para iniciar un proyecto Spring Boot. A través de este portal puedes seleccionar diferentes opciones como la versión de Java con la que desarrollarás tu proyecto, la herramienta de gestión del proyecto (Maven o Gradle), y los módulos o librerias que usarás.
 

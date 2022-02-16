@@ -1,23 +1,13 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 03: Controladores PUT para actualización de información
 
-## 💪 Reto 03: Controladores PUT para actualización de información
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender la forma de crear manejadores de peiticiones para actualizar información.
 - Manejar parámetros relacionados con fechas.
 - Consumir el servicio usando un navegador Web y con Postman.
 
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition.
-1. Tener Postman instalado en el equipo.
-
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 En el ejemplo anterior creamos un controlador que recibía un parámetro en el cuerpo de la petición a través de un manejador **POST**. Para este reto deberás realizar una tarea similar, pero usando un método **PUT** y agregando un parámetro adicional en el cuerpo de la petición. Este parámetro será una fecha la cual deberás sumarle un día y regresarla como respuesta de la petición. Eso quiere decir que si envias como parámetro el 1 de noviembre del 2023, deberás obtener den la respuesta el 2 de noviembre del 2023.
 
