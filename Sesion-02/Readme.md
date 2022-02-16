@@ -43,7 +43,7 @@ Diferentes formas de crear la estructura de las clases; por ejemplo, usando here
 
 ---
 
-<img src=".github/assets/img/Interpreter-preview" align="right" height="90" hspace="10">
+<img src=".github/assets/img/Interpreter-preview.png" align="right" height="90" hspace="10">
 
 
 #### <ins>Tema 3: Patrones de comportamiento.</ins>

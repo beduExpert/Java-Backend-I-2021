@@ -1,4 +1,4 @@
-## Sesión 5: Patrón Decorador
+## Sesión 2: Patrón Decorador
 
 ### 🎯 OBJETIVO
 
