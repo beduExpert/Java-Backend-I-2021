@@ -1,63 +1,82 @@
+## Sesión 1: Construcción de proyectos con Gradle :elephant:
 
-`Desarrollo Web` > `BackEnd Básico Java`
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg" align="right" height="120" hspace="10">
 
-## 👋 Sesión 1: Construcción de proyectos con Gradle
-
-### 🎯 Objetivo de la sesión
+<div style="text-align: justify;">
+ 
+### 1. Objetivos :dart:
 
 - Aprender el uso de la herramienta Gradle para construir y ejecutar proyectos en lenguaje Java.
 
-### ⚙ Configuración
+### 2. Contenido :blue_book:
 
-- Gradle
-- Editor de código
-
-### 🎯 Qué aprenderán
-
-- Creación de archivo `build.gradle`
-- Compilación de código Java usando Gradle
-- Ejecución de programas en código Java usando Gradle
-- Instalación y uso de plugins de Gradle
-
-### 👀 Antes de comenzar...
+#### 👀 Antes de comenzar...
 
 Debemos verificar que nuestro equipo tenga correctamente instalado **Java** y **Gradle**:
 
 - Para verificar la versión instalada de **Java** ejecuta el comando `java -version`:
 
-<img src="../java-version.png" alt="Versión de Java" />
+<img src="../.github/assets/img/java-version.png" alt="Versión de Java" />
 
 *Nota: Usaremos la versión 11 de Java aunque puedes usar la más reciente.*
 
 - Para verificar la versión instalada de **Gradle** ejecuta el comando `gradle -version`:
 
-<img src="../gradle-version.png" alt="Versión de Gradle" />
+<img src="../.github/assets/img/gradle-version.png" alt="Versión de Gradle" />
 
 *Nota: Usaremos la versión 7 de Gradle aunque puedes usar la más reciente.*
 
-### 🎩 Introducción
+En este módulo aprenderemos:
+- Creación de archivo `build.gradle`
+- Compilación de código Java usando Gradle
+- Ejecución de programas en código Java usando Gradle
+- Instalación y uso de plugins de Gradle
+
+
+---
+
+<img src=".github/assets/img/Build-Tools.jpg" align="right" height="90" hspace="10">
+
+#### <ins>Tema 1: ¿Qué es Gradle?</ins>
 
 Todo proyecto que utilice Gradle como herramienta de construcción debe tener un archivo llamado `gradle.build` el cual contiene las instrucciones necesarias (en lenguaje Groovy) para ejecutar **tareas** que ayuden a realizar alguna acción sobre código.
 
-Comenzaremos creando nuestras propias tareas personalizadas para conocer el uso básico de Gradle y posteriormente crearemos nuestras primeras aplicaciones Java siendo compiladas y ejecutadas por el mismo Gradle.
+Comenzaremos con el [primer ejemplo](./Ejemplo-01) creando nuestras propias tareas personalizadas para conocer el uso básico de Gradle.
 
-### 📚 Organización de la Clase
+- [**`EJEMPLO 1`**](./Ejemplo-01)
 
-- Tareas personalizadas
+---
 
-	- [Ejemplo 01](Ejemplo-01)
+<img src=".github/assets/img/command-line.jpg" align="right" height="90" hspace="10">
 
-- Compilación y generación de archivos JAR
+#### <ins>Tema 2: Compilación y ejecución con Gradle.</ins>
 
-	- [Ejemplo 02](Ejemplo-02)
-  - [Ejemplo 03](Ejemplo-03)
-  - [Reto 01](Reto-01)
+Ahora que conocemos el uso general de Gradle, veremos cómo usarlo para el desarrollo de aplicaciones Java. En el [segundo ejemplo](./Ejemplo-02) lo usaremos para compilar una aplicación desde línea de comandos (así es, sin usar un IDE) y posteriormente, en el [tercer ejemplo](./Ejemplo-03) generaremos un jar para su ejecución usando el mismo Gradle.
+
+Es aquí donde tendrás tu [primer reto](./Reto-01) en el que tendrás que escribir tu primera aplicación, compilarla y generar un archivo `.jar`.
+
+- [**`EJEMPLO 2`**](./Ejemplo-02)
+- [**`EJEMPLO 3`**](./Ejemplo-03)
+- [**`Reto 1`**](./Reto-01)
+
+
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" align="right" height="90" hspace="10">
+
+#### <ins>Tema 3: Compilación y ejecución de aplicaciones Javas.</ins>
+
+Aquí aprenderás como compilar y ejecutar tu aplicación sin tener que generar el archivo `.jar`. Para eso usaremos un plugin de Gradle, `application` el cual nos simplificará la vida. 
 
 - Compilación y ejecución de aplicaciones Java
 
-	- [Ejemplo 04](Ejemplo-04)
-	- [Reto 02](Reto-02)
+- [**`EJEMPLO 4`**](./Ejemplo-04)
+- [**`Reto 3`**](./Reto-03)
 
-- **POSTWORK**
+### 3. Postwork :memo:
+
+Encuentra las indicaciones y consejos para reflejar los avances de tu proyecto de este módulo.
  
-  - [Compilación de Markdown](Postwork)
+- [**`POSTWORK SESIÓN 5`**](./Postwork/)
+  
+<br/>
+
+</div>

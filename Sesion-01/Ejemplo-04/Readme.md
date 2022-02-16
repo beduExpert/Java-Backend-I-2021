@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 04: Compilando y Ejecutando aplicaciones Java
 
-## 🧠 Ejemplo 04: Compilando y Ejecutando aplicaciones Java
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Compilar y ejecutar una aplicación de Java a través de Gradle
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 En el ejercicio anterior logramos poder ejecutar el JAR que genera el plugin de Java para Gradle pero a pesar de eso el proceso para correr un programa sigue siendo bastante complicado... ¿existirá alguna forma de hacerlo más simple? 😫
 

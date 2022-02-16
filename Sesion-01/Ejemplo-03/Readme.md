@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 03: Ejecutar el JAR generado por Gradle
 
-## 🧠 Ejemplo 03: Ejecutar el JAR generado por Gradle
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Ejecutar de manera satisfactoria el JAR generado por Gradle
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 En el ejercicio anterior pudimos compilar un archivo Java usando el plugin de Java pero... ¿notaste algo más al ejecutar el comando `gradle build`? 🤔
 

@@ -1,19 +1,11 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 01: Tareas personalizadas
 
-## 🧠 Ejemplo 01: Tareas personalizadas
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear un archivo `build.gradle`
 - Crear una tarea personalizada en **Gradle**
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Comenzamos creando un archivo llamado `build.gradle`.
 

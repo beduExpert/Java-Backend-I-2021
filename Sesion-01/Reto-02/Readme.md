@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 02: Ejecución de una aplicación Java con Gradle
 
-## 💪 Reto 02: Ejecución de una aplicación Java con Gradle
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Compilar y ejecutar un programa en Java utilizando Gradle como herramienta de construcción
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Crear un programa que imprima en pantalla la suma de los primeros 100 números y que pueda ser ejecutado a través de un comando con Gradle.
 

@@ -42,7 +42,7 @@ Crear e inyectar un *Bean* en Spring es muy sencillo, como lo veremos en el Ejem
 
 #### <ins>Tema 2: Configuración implícita de Beans para inyección de dependencias.</ins>
 
-Si bien es posible inicializar y configurar los *Beans* de forma explícita (y esto es algo muy común cuando deseamos modificar la configuración por default proporcionada por los distintos componentes ya que proporciona el Framework de Spring) cuando creamos nuestras propias clases podemos ahorrarnos este trabajo al permitir que Spring configure e inicialice de forma implícita los objetos creados a partir de nuestras clases. En el [segundo ejemplo](./Ejemplo-01) veremos cómo hacer esto, y tendrás como [primer reto](./Reto-01) el modificar el scope de uno de estos objetos.
+Si bien es posible inicializar y configurar los *Beans* de forma explícita (y esto es algo muy común cuando deseamos modificar la configuración por default proporcionada por los distintos componentes ya que proporciona el Framework de Spring) cuando creamos nuestras propias clases podemos ahorrarnos este trabajo al permitir que Spring configure e inicialice de forma implícita los objetos creados a partir de nuestras clases. En el [segundo ejemplo](./Ejemplo-02) veremos cómo hacer esto, y tendrás como [primer reto](./Reto-01) el modificar el scope de uno de estos objetos.
 
 - [**`EJEMPLO 2`**](./Ejemplo-02)
 - [**`Reto 1`**](./Reto-01)

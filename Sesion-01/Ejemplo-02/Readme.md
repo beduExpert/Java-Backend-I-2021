@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 02: Compilar un programa en Java
 
-## 🧠 Ejemplo 02: Compilar un programa en Java
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Compilar un archivo con código en lenguaje Java a través de Gradle.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 En el ejercicio anterior vimos una de las características más importantes de Gradle que es la definición y ejecución de tareas, pero entonces... ¿si quiero ejecutar un código real entonces debo escribir mis propias tareas? 😯😓😔😕 
 

@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 01: Compilación y generación de JAR con Gradle
 
-## 💪 Reto 01: Compilación y generación de JAR con Gradle
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Compilar y generar un archivo JAR a partir de un código Java con Gradle
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Crear un programa en Java que convierta un número entero a binario, dicho programa deberá compilarse con Gradle.
 
