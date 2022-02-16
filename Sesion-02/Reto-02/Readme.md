@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 02: Patrón Command
 
-## 💪 Reto 02: Patrón Command
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Resolver un problema utilizando el patrón Command.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Tenemos un programa que manipula una variable entera llamada `counter` a través de un menú de opciones. Utiliza el patrón Command y modifica el código según sea necesario para implementar la opción de "deshacer" cambios.
 

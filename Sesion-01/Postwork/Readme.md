@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
-
-## 💪 Postwork: Compilación de markdown
+## Sesión 1: Compilación de markdown
 
 ### 🎯 OBJETIVO
 
 - Compilar un archivo en lenguaje Markdown a HTML
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 ¿Conoces lo que es Markdown? Si no es así ¡no te preocupes! En el siguiente [enlace](https://programmerclick.com/article/13741359806/) encontrarás una explicación bastante clara pero en resumen, es un lenguaje de marcado que permite enriquecer textos planos de una manera simple y es muy utilizado en Git para crear documentación o el famoso archivo llamado README.md.
 

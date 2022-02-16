@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
-
-## 💪 Postwork: Patrón Decorador
+## Sesión 5: Patrón Decorador
 
 ### 🎯 OBJETIVO
 
 - Estudiar y resolver un problema utilizando el patrón Decorador
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Una cadena de helados muy famosa en el país ha solicitado tu ayuda para implementar una nueva versión de su sistema actual. 
 

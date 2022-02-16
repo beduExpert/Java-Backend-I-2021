@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 03: Patrones de Comportamiento
 
-## 🧠 Ejemplo 03: Patrones de Comportamiento
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender los casos de uso de los Patrones de Comportamiento
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Los patrones de comportamiento tratan con algoritmos y la asignación de responsabilidades entre objetos.
 

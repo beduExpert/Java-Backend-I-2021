@@ -1,18 +1,11 @@
-`Desarrollo Web` > `BackEnd Básico Java`
 
-## 🧠 Ejemplo 01: Patrones Creacionales
+## Ejemplo 01: Patrones Creacionales
 
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender los casos de uso de los Patrones Creacionales
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Los patrones creacionales son aquellos que nos proponen soluciones para problemas relacionados con la instanciación de objetos. Automatizar el proceso de construcción de un objeto complejo, limitar la instanciación de una clase a un único objeto al que se pueda acceder de manera global o usar un objeto como prototipo para crear otros objetos similares son algunos de los usos de los patrones creacionales.
 

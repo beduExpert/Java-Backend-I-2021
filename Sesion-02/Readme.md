@@ -1,39 +1,13 @@
+## Sesión 2: Patrones de Diseño :world_map:
 
-`Desarrollo Web` > `BackEnd Básico Java`
+<img src=".github/assets/img/patrones.png" align="right" height="120" hspace="10">
+<div style="text-align: justify;">
 
-## 👋 Sesión 2: Patrones de Diseño
-
-### 🎯 Objetivo de la sesión
+### 1. Objetivos :dart:
 
 - Identificar los distintos tipos de Patrones de Diseño que son fundamentales para el uso y desarrollo de aplicaciones con Spring Boot.
 
-### ⚙ Configuración
-
-- Gradle
-- Editor de código
-
-### 🎯 Qué aprenderán
-
-- Tipos de patrones de diseño: Creación, Estructurales y Comportamiento
-- Ejemplos de problemas comunes y soluciones con Patrones de Diseño
-
-### 👀 Antes de comenzar...
-
-Debemos verificar que nuestro equipo tenga correctamente instalado **Java** y **Gradle**:
-
-- Para verificar la versión instalada de **Java** ejecuta el comando `java -version`:
-
-<img src="../java-version.png" alt="Versión de Java" />
-
-*Nota: Usaremos la versión 11 de Java aunque puedes usar la más reciente.*
-
-- Para verificar la versión instalada de **Gradle** ejecuta el comando `gradle -version`:
-
-<img src="../gradle-version.png" alt="Versión de Gradle" />
-
-*Nota: Usaremos la versión 7 de Gradle aunque puedes usar la más reciente.*
-
-### 🎩 Introducción
+### 2. Contenido :blue_book:
 
 Los patrones de diseño (design patterns) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
 
@@ -41,22 +15,52 @@ A menudo los patrones se confunden con algoritmos porque ambos conceptos describ
 
 Una analogía de un algoritmo sería una receta de cocina: ambos cuentan con pasos claros para alcanzar una meta. Por su parte, un patrón es más similar a un plano, ya que puedes observar cómo son su resultado y sus funciones, pero el orden exacto de la implementación depende de ti.
 
-### 📚 Organización de la Clase
+En este módulo aprenderemos:
 
-- Patrones Creacionales
+- Tipos de patrones de diseño: Creación, Estructurales y Comportamiento
+- Ejemplos de problemas comunes y soluciones con Patrones de Diseño
 
-	- [Ejemplo 01](Ejemplo-01)
+---
 
-- Patrones Estructurales
+<img src=".github/assets/img/creational.png" align="right" height="90" hspace="10">
 
-	- [Ejemplo 02](Ejemplo-02)
-  - [Reto 01](Reto-01)
+#### <ins>Tema 1: Patrones creacionales</ins>
 
-- Patrones de Comportamiento
+Diferentes maneras de crear objetos o grupos de objetos. Sí, todos los objetos en Java se crean usando la palabra reservada `new`, pero podemos envolver este llamado en otras estructuras que faciliten que otros objetos obtengan una instancia apropiada e inicializada de forma correcta. Esto ayuda a ocultar los detalles de cómo los objetos son creados o inicializados.
 
-	- [Ejemplo 03](Ejemplo-03)
-  - [Reto 02](Reto-02)
+- [**`EJEMPLO 1`**](./Ejemplo-01)
 
-- **POSTWORK**
- 
-  - [Patrón Decorador](Postwork)
+---
+
+<img src=".github/assets/img/structural.gif" align="right" height="90" hspace="10">
+
+#### <ins>Tema 2: Patrones estructurales.</ins>
+
+Diferentes formas de crear la estructura de las clases; por ejemplo, usando herencia y composición para crear objetos grandes y complejos a través de otros más simples.
+
+- [**`EJEMPLO 2`**](./Ejemplo-02)
+- [**`Reto 1`**](./Reto-01)
+
+---
+
+<img src=".github/assets/img/Interpreter-preview" align="right" height="90" hspace="10">
+
+
+#### <ins>Tema 3: Patrones de comportamiento.</ins>
+
+ Formas en las que podemos lograr una mejor interacción entre objetos para lograr un bajo acoplamiento y flexibilidad.
+
+- [**`EJEMPLO 3`**](./Ejemplo-03)
+- [**`Reto 2`**](./Reto-02)
+
+---
+
+### 3. Postwork :memo:
+
+Encuentra las indicaciones y consejos para reflejar los avances de tu proyecto de este módulo.
+
+- [**`POSTWORK SESIÓN 2`**](./Postwork/)
+
+<br/>
+
+</div>

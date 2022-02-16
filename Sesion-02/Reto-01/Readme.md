@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Reto 01: Patrón Adapter
 
-## 💪 Reto 01: Patrón Adapter
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Resolver un problema utilizando el patrón Adapter.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Un motor para un carro clásico debe implementar las siguientes operaciones:
 
