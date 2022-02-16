@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 01: Pruebas unitarias con JUnit 
 
-## 🧠 Ejemplo 01: Pruebas unitarias con JUnit 
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Aprender a crear y ejecutar una prueba usando JUnit 
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 JUnit es uno de los frameworks de pruebas más populares en el ecosistema de la tecnología Java. La versión 5 de JUnit contiene muchas características útiles que nos ayudan a cumplir con el objetivo de desarrollar muchos tipos distintos de pruebas unitarias y de integración. 
 

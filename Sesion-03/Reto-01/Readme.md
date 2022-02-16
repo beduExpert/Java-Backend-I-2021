@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
-
-## 💪 Reto 03: Prueba de Exceptions
+## Reto 03: Prueba de Exceptions
 
 ### 🎯 OBJETIVO
 
 - Realizar una prueba unitaria que se encargue de validar que al momento de validar una funcionalidad, se lanza la excepción esperada.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-1. Tener instalado el JDK versión 11 o superior.
-1. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition.
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Al momento de mostrar una demo de nuestra calculadora al cliente, este quedó maravillado de su correcto funcionamiento y la ejecución correcta de todas las operaciones que nos pidió realizar durante la demo. Sin embargo, notó que al momento de realizar la implementación de la calculadora omitimos una operación que para él es esencial en sus operaciones diarias: la división. Tu reto será arreglar este terrible error que hemos cometido al entregar una aplicación incompleta al cliente.
 

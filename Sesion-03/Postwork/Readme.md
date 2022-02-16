@@ -1,18 +1,10 @@
-`Desarrollo Web` > `BackEnd Básico Java`
-
-## 💪 Postwork: Pruebas dinámicas
+## Sesión 3: Pruebas dinámicas
 
 ### 🎯 OBJETIVO
 
 - Relizar una serie de pruebas dinámicas usando JUnit 5.
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener un editor de código instalado en el equipo
-3. Tener acceso a la terminal del equipo
-
-### 💭 DESCRIPCIÓN
+### DESARROLLO
 
 Los casos de prueba anotados con `@Test` son pruebas estáticas, esto quiere decir que al momento de compilar la aplicación ya se tienen todos los elementos de la prueba listos para ejecutarse y su comportamiento no puede cambiarse. Esto es muy útil cuando tenemos un conjunto pequeño de datos con los que queremos hacer la prueba. Pero puede convertirse en un problema cuando tenemos un conjunto grande o dinámico de las mismas `@Test` tiene muchas limitaciones. 
 

@@ -1,20 +1,11 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 02: Pruebas unitarias con JUnit y Mockito
 
-## 🧠 Ejemplo 02: Pruebas unitarias con JUnit y Mockito
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear una prueba que valide el correcto funcionamiento de una clase o componente.
 - Simular el funcionamiento de una clase que aún no existe, usando un mock creado con Mockito.
 
-
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener instalado el JDK versión 11 o superior.
-3. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Uno de los puntos más importantes al desarrollar una prueba unitaria es que esta debe validar un funcionamiento particular de una método o clase de forma aislada de otras funcionalidades; sin embargo, en una aplicación esto no siempre es fácil de lograr, ya que nuestras clases tienen relación y dependen a su vez de otras clases. Para poder aislar completamente los componentes y funcionalidades requeridos por una prueba unitaria existen varias técnicas, una de las más populares es el uso de **dobles de prueba** u objetos *mock*, lo cuales son objetos que sustituyen a las clases reales y a las cuales podemos definirles el comportamiento esperado.
 

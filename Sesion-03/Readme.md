@@ -1,64 +1,68 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Sesión 3: Anotaciones y Pruebas Unitarias con JUnit :heavy_check_mark:
 
-## 👋 Sesión 3: Anotaciones y Pruebas Unitarias con JUnit
+<img src=".github/assets/img/indice.png" align="right" height="120" hspace="10">
+<div style="text-align: justify;">
 
-### 🎯 Objetivo de la sesión
+### 1. Objetivos :dart:
 
 - Distinguir los distintos usos de las anotaciones en las pruebas con JUnit y Mockito.
 - Identificar qué es JUnit
 - Aprender a crear dobles de prueba con Mockito.
 
-
-### ⚙ Configuración
-
-- Gradle
-- JDK versión 11 o superior.
-- Entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-
-### 🎯 Qué aprenderán
-
-- Aprender qué es una prueba unitaria y los beneficios de estas durante el ciclo de vida del desarrollo de software.
-- Aplicar pruebas unitarias usando JUnit 5 para validar el correcto funcionamiento de una aplicación de forma automática.
-
-### 👀 Antes de comenzar...
-
-Debemos verificar que nuestro equipo tenga correctamente instalado **Java** y **Gradle**:
-
-- Para verificar la versión instalada de **Java** ejecuta el comando `java -version`:
-
-<img src="../java-version.png" alt="Versión de Java" />
-
-*Nota: Usaremos la versión 11 de Java aunque puedes usar la más reciente.*
-
-- Para verificar la versión instalada de **Gradle** ejecuta el comando `gradle -version`:
-
-<img src="../gradle-version.png" alt="Versión de Gradle" />
-
-*Nota: Usaremos la versión 7 de Gradle aunque puedes usar la más reciente.*
-
-### 🎩 Introducción
+### 2. Contenido :blue_book:
 
 Una prueba tiene como objetivo evaluar la funcionalidad de una aplicación e identificar posibles errores. Dentro del mundo de las pruebas, el tipo más básico son las **pruebas unitarias**, las cuales se encargan de validar una funcionalidad única de una parte de nuestro código. 
 
 En Java existen varios frameworks para realizar pruebas unitarias. El más ampliamente utilizado es JUnit. 
 
-### 📚 Organización de la Clase
+En este módulo aprenderemos:
 
-- Pruebas unitarias con JUnit
+- Aprender qué es una prueba unitaria y los beneficios de estas durante el ciclo de vida del desarrollo de software.
+- Aplicar pruebas unitarias usando JUnit 5 para validar el correcto funcionamiento de una aplicación de forma automática.
 
-	- [Ejemplo 01](Ejemplo-01)
-	- [Reto 01](Reto-01)
+---
 
-- Pruebas unitarias con JUnit y Mockito
+<img src=".github/assets/img/junit.png" align="right" height="90" hspace="10">
 
-	- [Ejemplo 02](Ejemplo-02)
-	- [Reto 02](Reto-02)
+#### <ins>Tema 1: Pruebas con JUnit</ins>
 
-- Suites de pruebas
+JUnit es un framework para realizar y automatizar pruebas de aplicaciones Java. Es decir, JUnit se sitúa en la fase de pruebas dentro del ciclo de Ingeniería del Software.
 
-	- [Ejemplo 03](Ejemplo-03)
+- [**`EJEMPLO 1`**](./Ejemplo-01)
+- [**`Reto 1`**](./Reto-01)
+
+---
+
+<img src=".github/assets/img/mockito.jpg" align="right" height="90" hspace="10">
+
+Mockito sirve para crear Mocks, Spys, etc, de manera sencilla.
+
+Esta librería de Java permite simular el comportamiento de una clase de forma dinámica. De esta forma se crea un aislamiento de las dependencias con otras clases y sólo se probará la funcionalidad que se quiere probar. La simulación del comportamiento de una clase se realiza mediante los dobles.
+
+#### <ins>Tema 2: Dobles de pruebas con JUnit y Mockito.</ins>
+
+- [**`EJEMPLO 2`**](./Ejemplo-02)
+- [**`Reto 2`**](./Reto-02)
+
+---
+
+<img src=".github/assets/img/suite.png" align="right" height="90" hspace="10">
+
+El concepto fundamental en estas herramientas es el caso de prueba (test case), y la suite de prueba (test suite). Los casos de prueba son clases o módulos que disponen de métodos para probar los métodos de una clase o módulo concreta/o. Así, para cada clase que quisiéramos probar definiríamos su correspondiente clase de caso de prueba. Mediante las suites podemos organizar los casos de prueba, de forma que cada suite agrupa los casos de prueba de módulos que están funcionalmente relacionados.
+
+
+#### <ins>Tema 3: Suites de pruebas.</ins>
+
+- [**`EJEMPLO 3`**](./Ejemplo-03)
   
+---
 
-- **POSTWORK**
- 
-  - [Pruebas Dinámicas](Postwork)
+### 3. Postwork :memo:
+
+Encuentra las indicaciones y consejos para reflejar los avances de tu proyecto de este módulo.
+
+- [**`POSTWORK SESIÓN 3`**](./Postwork/)
+
+<br/>
+
+</div>

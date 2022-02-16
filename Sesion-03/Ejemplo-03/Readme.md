@@ -1,20 +1,12 @@
-`Desarrollo Web` > `BackEnd Básico Java`
+## Ejemplo 03: Suites de pruebas
 
-## 🧠 Ejemplo 03: Suites de pruebas
-
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear una prueba que valide el correcto funcionamiento de una clase o componente.
 - Simular el funcionamiento de una clase que aún no existe, usando un mock creado con Mockito.
 
 
-### 📃 REQUISITOS
-
-1. Tener **Gradle** instalado en el equipo
-2. Tener instalado el JDK versión 11 o superior.
-3. Tener un entorno de desarrolla (IDE) instalado en el equipo. Se recomienda IntelliJ Idea Community Edition
-
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Cuando comenzamos a desarrollar un número de pruebas, en algunas ocasiones querremos agruparlas de una forma lógica en la que tengan sentido y ejecutarlas en conjunto y de forma independiente a las demás pruebas que podemos tener en el sistema. A esta agrupación lógica de pruebas se le conoce con el nombre de **Suite de pruebas**
 
