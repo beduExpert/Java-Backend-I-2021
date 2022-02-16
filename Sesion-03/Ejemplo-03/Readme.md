@@ -33,7 +33,7 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
+```
 
 Para este ejercicio modificaremos la clase de prueba de la calculadora del primer ejercicio. Dejaremos esta clase vacía y crearemos una clase especial para validar cada una de las operaciones. Así que al final tendremos 5 clases.
 
