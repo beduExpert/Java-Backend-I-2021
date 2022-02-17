@@ -54,10 +54,10 @@ Ahora que sabemos cómo recibir una petición por parte del usuario, hay que proce
 
 #### <ins>Tema 3: Carga y descarga de archivos.</ins>
 
-Si bien la mayor parte de la comunicación entre cliente y servidor se realizan por medio de intercambio de información en texto plano, en algunas ocasiones será necesario el intercambio de archivos en un formato binario, ya sea para realizar la carga o descarga de archivos. En el [tercer ejemplo](./Ejemplo-03) veremos cómo realizar la carga y en el [segundo reto](./Reto-02) tu labor será implementar la descarga de los mismos.
+Si bien la mayor parte de la comunicación entre cliente y servidor se realizan por medio de intercambio de información en texto plano, en algunas ocasiones será necesario el intercambio de archivos en un formato binario, ya sea para realizar la carga o descarga de archivos. En el [tercer ejemplo](./Ejemplo-03) veremos cómo realizar la carga de un archivo desde un cliente hasta el servidor. 
 
 - [**`EJEMPLO 3`**](./Ejemplo-03)
-- [**`Reto 2`**](./Reto-02)
+
 
 ---
 

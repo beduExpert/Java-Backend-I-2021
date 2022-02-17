@@ -1,21 +1,85 @@
-## POST Request
+## Ejemplo 03: Carga de archivos
 
 ### OBJETIVO
 
-Hacer una petición con el método `POST`
+- Cargar un archivo al servidor a través de una petición HTTP
 
 
-#### REQUISITOS
+### DESARROLLO
 
-El código del ejemplo 1
+Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 
-#### DESARROLLO
+  - Gradle Proyect (no te preocupes, no es necesario que tengas Gradle instalado).
+  - Lenguaje: **Java**.
+  - Versión de Spring Boot, la versión estable más reciente
+  - Grupo, artefacto y nombre del proyecto.
+  - Forma de empaquetar la aplicación: **jar**.
+  - Versión de Java: **11** o superior.
 
-Ahora vamos a hacer una petición `POST` vamos a usar un servicio como prueba que lo único que hace es devolver la información que le mandamos con el método `POST` [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
+![](img/img_01.png)
 
-![post](post.png)
+En la siguiente ventana elige Spring Web como la única dependencia del proyecto:
 
-Para mandar la información usaremos un objeto así como hicimos cuando recibimos información, en este caso como es el mismo tipo de información solo hace falta hacer una clase [Informacion.java](demo/src/main/java/com/example/demo/Informacion.java) la cual anotamos con `@Data`.
+![imagen](img/img_02.png)
 
-El ejemplo de la petición `POST` la hacemos una tarea programada [TareaProgramada.java](demo/src/main/java/com/example/demo/TareaProgramada.java)
+Presiona el botón "Finish".
+
+Para este ejemplo solo necesitamos un paquete `controller`. Dentro de este paquete crea una clase llamada `DocumentoController`. 
+
+
+```java
+@RestController
+@RequestMapping("/api/v1/documento")
+public class DocumentoController {
+    
+}
+```
+
+Para recibir un archivo cargado a través de una petición HTTP, debe hacer lo siguiente: 
+
+```java
+
+   @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  public Object cargaArchivo(@RequestPart MultipartFile file) {
+    String fileName = file.getOriginalFilename();
+    InputStream inputStream = file.getInputStream();
+    String contentType = file.getContentType();
+    ...
+}
+
+```
+
+Hay que tener en cuenta que el nombre del objeto `MultipartFile` decorado con `@RequestPart` debe coincidir con el nombre de la parte en la petición. Veremos cómo hacer esto desde Postman en unos momentos. 
+
+![](img/img_04.png)
+
+También es posible hacer la carga de múltiples archivos al mismo tiempo declarando el objeto `MultipartFile` como un arreglo, de la siguiente forma:
+
+
+```java
+  @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  public Object uploadFile(@RequestPart MultipartFile[] files) {
+  
+    for (file : files) {
+        String fileName = file.getOriginalFilename();
+        InputStream inputStream = file.getInputStream();
+        String contentType = file.getContentType();
+        ...
+    }
+}
+```
+
+
+Ahora haremos una modificación a la forma en la que hacemos la petición desde Postman. Los cambios correspondientes puedes verlos en esta imagen:
+
+![](img/img_05.png)
+
+
+Ahora sí, ejecuta tu aplicación. Debes ver la siguiente respuesta en Postman:
+
+![](img/img_06.png)
+
+Y en la consola de IntelliJ Idea debes tener los siguientes mensajes:
+
+![](img/img_07.png)
 
