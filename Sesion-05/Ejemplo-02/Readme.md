@@ -1,12 +1,12 @@
-## 🧠 Ejemplo 02: Configuración implícita de Beans para inyección de dependencias.
+## Ejemplo 02: Configuración implícita de Beans para inyección de dependencias.
 
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear un Bean de Spring de forma implícita.
 - Inyectar el Bean creado en otras clases para su uso.
 
 
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 

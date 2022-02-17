@@ -1,11 +1,11 @@
-## 🧠 Ejemplo 03: Inicialización de propiedades
+## Ejemplo 03: Inicialización de propiedades
 
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Inicializar los valores de un objeto adminsitrado por Spring, después de que este ha sido creado.
 
 
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 

@@ -1,12 +1,12 @@
-## 🧠 Ejemplo 01: Definición y configuración explícita de Beans
+## Ejemplo 01: Definición y configuración explícita de Beans
 
-### 🎯 OBJETIVO
+### OBJETIVO
 
 - Crear un Bean de Spring de forma explícita.
 - Inyectar el Bean creado en otras clases para su uso.
 
 
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 
