@@ -1,12 +1,11 @@
-## 🧠 Ejemplo 01: Definición y configuración explícita de Beans
+## Ejemplo 01: Parámetros de peticiones HTTP POST y GET
 
-### 🎯 OBJETIVO
+### OBJETIVO
 
-- Crear un Bean de Spring de forma explícita.
-- Inyectar el Bean creado en otras clases para su uso.
+- Recibir un objeto en el cuerpo de una petición HTTP POST
 
 
-### 🎩 DESARROLLO
+### DESARROLLO
 
 Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 
@@ -17,164 +16,198 @@ Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguient
   - Forma de empaquetar la aplicación: **jar**.
   - Versión de Java: **11** o superior.
 
-![](img/img_001.png)
+![](img/img_01.png)
 
-No selecciones ninguna dependencia, no las necesitaremos en este ejemplo.
+En la siguiente ventana elige Spring Web como la única dependencia del proyecto:
+
+![imagen](img/img_02.png)
 
 Presiona el botón "Finish".
 
-Ahora, crea dos paquetes dentro de la estructura creada por IntelliJ. El primer paquete se llamará `model` y el segundo `config`:
+Ahora, crea dos paquetes dentro de la estructura creada por IntelliJ. El primer paquete se llamará `model` y el segundo `controller`:
 
-![](img/img_002.png)
+![](img/img_03.png)
 
-Dentro del paquete `model` crea una nueva clase llamada `Saludo`. Esta representa al Bean que inyectaremos más adelante en este ejemplo:
+Dentro del paquete `model` crea una nueva clase llamada `Usuario`. Esta reprentará a un usuario que crearemos dentro del sistema. Esta clase tendrá las siguientes propiedades:
 
 ```java
-public class Saludo {
-    private final String nombre;
+public class Usuario {
+    private String nombre;
+    private String apellido;
+    private String usuario;
+    private String correoElectronico;
+    private String password;
+}
+```
 
-    public Saludo(String nombre) {
-        this.nombre = nombre;
-    }
+
+
+Agrega también sus métodos **getter** y **setter**. Es importante que esta clase tenga un constructor por default, sin argumentos. Este es creado por default por el compilador si la clase no tiene ningún constructor declarado, pero si agregar alguno deberás también agregar un constructor sin argumentos:
+
+```java
+public class Usuario {
+    private String nombre;
+    private String apellido;
+    private String usuario;
+    private String correoElectronico;
+    private String password;
 
     public String getNombre() {
         return nombre;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
 ```
 
-Fíjate como `Saludo` tiene una sola propiedad llamada `nombre` que hemos marcado como `final`. Esto quiere decir que una vez que se establezca el valor de esa propiedad no podrá ser modificado. Aunque esto no es obligatorio sí es una buena práctica.
 
-También, creamos un constructor que permita inicializar el valor de `nombre` y un `getter`. Debido a que el valor de `nombre` no puede ser cambiado una vez que se ha establecido, no es necesario proporcionar un `setter`.
-
-Dentro del paquete `config` crea una clase llamada `SaludoConfig`. Esta clase es la que usaremos para configurar el Bean que se usará en la aplicación. Como esta es una clase de **configuración** debemos decorarla con la anotación `@Configuration`, de esta forma le indicamos a Spring que esta clase se usará para la creación (o modificación) de beans dentro de la aplicación:
+Dentro del paquete `controller` crea una clase llamada `UsuarioController`. Esta clase recibirá la petición y la procesará. En este ejemplo lo único que hará es imprimir en consola la información recibida para crear al usuario. Lo primero que hacemos es indicar que esta clase será un manejador de peticiones, para ello la decoramos con la anotación `@RestController`:
 
 ```java
-@Configuration
-public class SaludoConfig {
+@RestController
+public class UsuarioController {
 
 }
 ```
 
-A continuación, declaramos nuestro primer Bean de forma explícita. Para ello hacemos uso de la anotación `@Bean` dentro de un método que, por convención, tendrá el mismo nombre del Bean que crearemos; en este caos será `saludo`:
+A continuación, indicamos el patrón que manejará este controlador. Una buena práctica cuando creamos manejadores de peticiones REST es versionar nuestra API, esto es tan fácil como poner el número de versión en el patró de URL:
 
 ```java
-@Bean
-public Saludo saludo(){
+@RestController
+@RequestMapping("/api/v1/usuario")
+public class UsuarioController {
 
 }
 ```
 
-Crear e inicializar nuestro bean dentro de este método es muy sencillo, simplemente regresamos una nueva instancia de `Saludo`:
+Ahora creamos nuestro método manejador de peticiones. Como manejaremos una petición tipo **POST** decoramos el método con la anotación `@PostMapping`
 
 ```java
-@Bean
-public Saludo saludo(){
-  return new Saludo("Beto");
+  @PostMapping
+  public String creaUsuario() {
+  
+  }
+```
+
+Lo siguiente es indicar que este método recibirá como parámetro un objeto de tipo `Usuario`. Spring MVC en automático leerá los parámetros de la petición, creará una nueva instancia de `Usuario` y establecerá los valores de sus atributos usando los que provienen de la petición. Es por esto es que es muy importante que los nombres que enviemos en la petición sean los mismos que se encuentran en el objeto `Usuario`. Para indicarle a Spring MVC que estamos esperando estos parámetros en el cuerpo de la petición debemos marcar el parámetro `Usuario` con la anotación `@RequestBody`:
+
+
+```java
+  @PostMapping
+  public String creaUsuario(@RequestBody Usuario usuario) {
+  
+  }   
+
+```
+
+Para terminar, en este método solo imprimiremos en consola el valor de los atributos, y regresaremos como valor una cadena:
+
+```java
+    @PostMapping
+    public String creaUsuario(@RequestBody Usuario usuario) {
+        System.out.println("Creando usuario");
+        System.out.println("Nombre: " + usuario.getNombre());
+        System.out.println("Apellido: " + usuario.getApellido());
+        System.out.println("Usuario: " + usuario.getUsuario());
+        System.out.println("E-Mail: " + usuario.getCorreoElectronico());
+
+        return "Usuario Creado";
+    }
+```
+
+Ejecuta tu aplicación y desde Postman envía una petición a esta URL: [http://localhost:8080/api/v1/usuario](http://localhost:8080/api/v1/usuario). Recueda que esta es una petición de tipo **POST**. Coloca el siguiente contenido en el cuerpo de la petición:
+
+
+```json
+{
+    "nombre": "Beto",
+    "apellido": "Ornitorrinco",
+    "usuario": "expert", 
+    "correoElectronico": "beto@bedu.org", 
+    "password": "beto1234"
 }
 ```
 
-Con esto le estamos proporcionando a Spring, de forma **explícita**, el Bean que usará cada vez que alguna clase necesite una instancia de `Saludo`. También, estamos inicializando el valor de su propiedad `nombre` de forma explícita a `Beto`.
+Envia la petición, debes obtener la siguiente salida en la consola:
 
-Hagamos uso de esta Bean en otra parte de nuestra aplicación.
+![](img/img_04.png)
 
-vamos a la clase principal, `Sesion5Application`, la cual está decorada con la anotación `@SpringBootApplication`. Es en esta clase donde le indicaremos a Spring que debe inyectar la instancia de `Saludo`. Para eso declararemos un atributo de tipo `Saludo`, de la siguiente forma:
+Y debes esto en Postman.
+
+![](img/img_05.png)
+
+Agreguemos otro parámetro. Spring MVC solo permite recibir un objeto en el cuerpo de una petición, pero podemos recibir también parámetros en la URL. Modifiquemos el manejador de peticiones para indicar que el cliente nos proporcionará el `id` del usuario como un parámetro en la URL de la petición. En la URL podemos recibir tantos parámetros como necesitemos. Usamos una notación especial, colocamos el nombre del parámetro entre llaves `{` y `}` en el patrón de URLs del manejador, de esta forma:
 
 ```java
-@SpringBootApplication
-public class Sesion5Application {
+    @PostMapping("/{id}")
+    public String creaUsuario(@RequestBody Usuario usuario) {
+    ...
+    }
 
-    private Saludo saludo;
+```
+
+Y agregamos un nuevo parámetro en la firma del método. Este parámetro debe estar marcado con la anotación `@PathVariable`. Si el nombre del parámetro y el de la variable es el mismo podemos no poner ningún atributo en la anotación, de lo contrario debemos indicar su nombre de forma explícita:
+
+```java
+    @PostMapping("/{id}")
+    public String creaUsuario(@RequestBody Usuario usuario, @PathVariable("id") long id) {
     
-    public static void main(String[] args) {
-        SpringApplication.run(Sesion5Application.class, args);
-    }   
-}
-```
-
-Antes de ver cómo indicarle a Spring que debe inyectar esta nueva instancia, mostraremos como comprobar que Spring está efectívamente inyectando el Bean, lo primero que haremos es hacer que `Sesion5Application` implemente la interface `CommandLineRunner`, y en su método `run` imprimiremos el valor del atributo `nombre` de saludo:
-
-```java
-@SpringBootApplication
-public class Sesion5Application implements CommandLineRunner {
-
-    private Saludo saludo;
-
-    public static void main(String[] args) {
-        SpringApplication.run(Sesion5Application.class, args);
-    }
-
-
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println(saludo.getNombre());
-	}
-}
-```
-
-Ahora sí, le indicaremos a Spring que debe inyectar la instancia. Lo veremos de tres formas, las dos primeras son maneras que funcionan pero no son muy recomendadas (anque tal vez los veas en muchos tutoriales), la tercera es la forma que sigue la mejor práctica para la inyección de estas instancias.
-
-En la primera forma, colocamos la anotación `@Autowired` directamente en la declaración de la instancia de `Saludo`, de esta forma:
-
-```java
-@Autowired
-private Saludo saludo;
-```
-
-Si ahora ejecutamos la aplicación, debemos obtener la siguiente salida en la consola:
-
-![](img/img_003.png)
-
-La primera forma funciona, pero no es recomendada. El problema es que el atributo `Saludo` tiene un nivel de acceso `private` (lo cual sigue las mejores prácticas de la encapsulación), esto quiere decir que Spring debe primero modificar el nivel de acceso de este atributo, inyectar el valor, y luego volver a regresar su nivel de acceso original. Esto, además de que es un problema potencial de seguridad, también hace que la inicialización se más lenta.
-
-Veamos la segunda forma de indicar a Spring que inyecte la instancia. Para esto, creamos un método `setter` para `saludo`, y movemos la anotación `@Autowired` a este método:
-
-```java
-    private Saludo saludo;
-
-    @Autowired
-    public void setSaludo(Saludo saludo) {
-        this.saludo = saludo;
+    ...
     }
 ```
 
-Si ejecutamos nuevamente la aplicación, debemos ver la misma salida en la consola. 
-
-![](img/img_003.png)
-
-Esta segunda forma es mucho mejor que la primera, ya que permitimos que Spring haga uso del `setter` correspondiente para inyectar la instancia, y de esta forma no se mete con los modificadores de acceso que estemos usando. Sin embargo, hay un problema, ya que ahora permitimos que alguna otra clase modifique en cualquier momento la instancia de `Saludo` que estamos usando. Esto, en algunos casos, puede ser algo que estemos buscando, pero en la mayoría de las ocasiones buscamos asegurar que siempre usemos una misma única instancia, y que una vez que esta se ha inyectado no sea modificado. 
-
-Para solucionar este problema, usaremos una tercera forma de inyectar la instancia de `Saludo`, y para ello declararemos un constructor de `Sesion5Application` que reciba la instancia correspondiente. Es en este constructor donde declararemos, usando `@Autowired`, que Spring debe inyectar la instancia de `Saludo`. Podemos hacerlo de dos formas, a nivel de constructor:
+Modifiquemos el cuerpo del método para regresar como parte de la respuesta el `id` del usuario:
 
 ```java
-    @Autowired
-    public Sesion5Application(Saludo saludo) {
-        this.saludo = saludo;
+    @PostMapping("/{id}")
+    public String creaUsuario(@RequestBody Usuario usuario, @PathVariable("id") long id) {
+        System.out.println("Creando usuario");
+        System.out.println("Nombre: " + usuario.getNombre());
+        System.out.println("Apellido: " + usuario.getApellido());
+        System.out.println("Usuario: " + usuario.getUsuario());
+        System.out.println("E-Mail: " + usuario.getCorreoElectronico());
+
+        return "Usuario " + id + " Creado";
     }
 ```
 
-o a nivel de parámetro:
+Modifica la ruta de la petición en Postman por esta nueva: [http://localhost:8080/api/v1/usuario/156](http://localhost:8080/api/v1/usuario/156). 
 
-```java
-public Sesion5Application(@Autowired Saludo saludo) {
-  this.saludo = saludo; 
-}
-```
+Envia la petición y ahora debes obtener esto como respuesta:
 
-Para este caso, las dos formas son equivalentes. 
+![](img/img_06.png)
 
-Gracias a esto ahora podemos declarar la instancia de `Saludo` como `final`, y de esa forma asegurar que no será modificada posteriormente:
-
-```java
-    private final Saludo saludo;
-
-    public Sesion5Application(@Autowired Saludo saludo) {
-        this.saludo = saludo;
-    }
-```
-
-Si volvemos a ejecutar la aplicación, veremos que obtenemos la misma salida.
-
-![](img/img_003.png)
-
-Esta tercera forma es la recomandada para inyectar los Beans dentro de las distintas clases de nuestra aplicación.
