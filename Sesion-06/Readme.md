@@ -42,7 +42,7 @@ La forma de comunicarse entre un cliente y el servidor es a través de peticiones
 
 <img src=".github/assets/img/response.png" align="right" height="90" hspace="10">
 
-#### <ins>Tema 2: Regrear objetos como respuesta.</ins>
+#### <ins>Tema 2: Regresar objetos como respuesta.</ins>
 
 Ahora que sabemos cómo recibir una petición por parte del usuario, hay que procesarla y darle una respuesta. Existen diferentes formas en las que podemos regresar una respuesta a un cliente. En la siguiente sesión veremos cómo regresar una página web, pero en el [segundo ejemplo](./Ejemplo-02) veremos cómo regresar un objeto que será automáticamente convertido en JSON para que el cliente pueda interpretarlo.
 

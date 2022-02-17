@@ -211,3 +211,4 @@ Envia la petición y ahora debes obtener esto como respuesta:
 
 ![](img/img_06.png)
 
+Para ver una lista completa de los parámetros que puedes recibir en una petición, consulta la [Documentación Oficial de Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-arguments).
