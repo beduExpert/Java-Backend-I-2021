@@ -1,13 +1,13 @@
-package org.bedu.java.backend.sesion6;
+package org.bedu.java.backend.solucion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Sesion5ApplicationTest {
+class SolucionApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
