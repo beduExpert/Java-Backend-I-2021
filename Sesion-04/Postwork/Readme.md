@@ -107,7 +107,7 @@ public void run(String... args) throws Exception {
 }
 ```
 
-En el cuerpo de `run` usa una instancia de `Scanner` para leer la entrada que el usaurio proporcione a través de la entrada estándar (el teclado). Aquí deberás leer el texto introducido y luego usarlo para establecer los valores de los atributos de `Persona`.
+En el cuerpo de `run` usa una instancia de `Scanner` para leer la entrada que el usuario proporcione a través de la entrada estándar (el teclado). Aquí deberás leer el texto introducido y luego usarlo para establecer los valores de los atributos de `Persona`.
 
 ```java
 @SpringBootApplication
@@ -150,11 +150,11 @@ Ahora usa los valores anteriores para crear una nueva instancia de `Persona` usa
     }
 ```
 
-Ejecuta la aplicación. Si lo haces desde IntelliJ Idea deberás hacer click en la consola y comenzar a escribir cuando se soliciten los datos:
+Ejecuta la aplicación. Si lo haces desde IntelliJ Idea deberás hacer clic en la consola y comenzar a escribir cuando se soliciten los datos:
 
 
 ![imagen](img/img_03.png)
 
-La aplicación se dentendrá de forma automática cuando el resultado se imprima en pantalla.
+La aplicación se detendrá de forma automática cuando el resultado se imprima en pantalla.
 
 </details>
