@@ -22,7 +22,7 @@ Adquirir los conocimientos necesarios para comenzar a desarrollar aplicaciones B
 
 ## :gear: Requerimientos
 
-Una de las mejores cualidades de Java es que fue el primer lenguaje completamente multiplataforma en existir, ¡y sus herramientas también lo son! En este curso usaremos [Gradle](https://gradle.org/install/) como herramienta de construcción del proyecto. Gradle se encargará de gestional el *ciclo de vida de construcción de la aplicación*, que son las fases por las que atraviesa el construcción desde su compilación, ejecución de pruebas, empaquetado y distribución.
+Una de las mejores cualidades de Java es que fue el primer lenguaje completamente multiplataforma en existir, ¡y sus herramientas también lo son! En este curso usaremos [Gradle](https://gradle.org/install/) como herramienta de construcción del proyecto. Gradle se encargará de gestionar el *ciclo de vida de construcción de la aplicación*, que son las fases por las que atraviesa el construcción desde su compilación, ejecución de pruebas, empaquetado y distribución.
 
 ### [Descargar Gradle](https://gradle.org/install/)
 
@@ -44,6 +44,6 @@ Además, usaremos uno de los mejores IDE (Integrated Develoment Environment) del
 |    4   | [Introducción a Spring Boot](./Sesion-04)                    | Introducción y primeros pasos de este módulo de Spring.           |
 |    5   | [Java Beans y la Inversión de Control](./Sesion-05)          | Usar Spring como motor de inyección de dependencias.              |
 |    6   | [Patrón MVC con Spring Boot](./Sesion-06)                    | Usar Spring MVC como framework de manejo de peticiones web.       |
-|    7   | [Sesión 7](./Sesion-07)                               | ??                           |
+|    7   | [Integración de Thymeleaf y Spring Boot](./Sesion-07)        | Usar Thymeleaf como motor de generación de vistas dinámicas       |
 |    8   | [Sesión 8](./Sesion-08)     | ??                       |
 
