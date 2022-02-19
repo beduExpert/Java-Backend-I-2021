@@ -6,16 +6,16 @@
 
 ### DESARROLLO
 
-En el Postwork de la sesión anterior implementamos una línea de comandos que solicitaba un nombre y número de teléfono y los usaba para construir una nueva instancia de una clase `Persona`. En ésta ocasión tu misión será extender este programa para que la línea de comandos para que:
+En el Postwork de la sesión anterior implementamos una línea de comandos que solicitaba un nombre y número de teléfono y los usaba para construir una nueva instancia de una clase `Persona`. En esta ocasión tu misión será extender este programa para que la línea de comandos para que:
 
-1. Valide que el número de teléfono solo contenga caracteres válidos: números, guión medio y espacio en blanco.
+1. Valide que el número de teléfono solo contenga caracteres válidos: números, guion medio y espacio en blanco.
 1. Valide que el número de teléfono contenga 10 dígitos.
 1. Si se tiene un número válido, elimine todos los caracteres que no sean numéricos.
-1. De al número de telefóno un formato de (##)-####-#### antes de imprimirlo en la consola.
+1. De al número de teléfono un formato de (##)-####-#### antes de imprimirlo en la consola.
 
 Dicha implementación debe estar contenida en dos clases “servicio” que deben ser inyectada en la clase principal.
 
-Recuerda que deberás implementar la interface `CommandLineRunner` que proporciona Spring Boot, para que por medio de línea de comandos reciba una cadena de texto y calcule el total de vocales que contiene el texto ingresado. Recuerda que para leer datos a través de una línea de comandos se utiliza la clase `Scanner` del paquete `java.util`.
+Recuerda que deberás implementar la interface `CommandLineRunner` que proporciona Spring Boot, para que por medio de línea de comandos reciba una cadena de texto y que para leer datos a través de una línea de comandos se utiliza la clase `Scanner` del paquete `java.util`.
 
 Además, en el archivo de configuración de Gradle debes agregar la siguiente línea:
 
@@ -82,7 +82,7 @@ public class Persona {
 }
 ```
 
-En el paquete `service` crea una clase `ValidadorTelefono` y coloca dos métodos, inicialmente vacíos. El primero validará que el teléfono contenga solo caracteres válidos, con esto le permitiremos al cliente que introduzca el número de teléfono usando el formato que le sea más conveniente; incluso podría copiarlo y pegarlo desde donde lo tenga guardado. El segundo métoddo eliminará todos los caracteres no numéricos del teléfono proporcionado por el usuario; esto lo usaremos para que, independientemente del formato que el cliente haya usado, podamos darle nuestro propio formato antes de imprimirlo.
+En el paquete `service` crea una clase `ValidadorTelefono` y coloca dos métodos, inicialmente vacíos. El primero validará que el teléfono contenga solo caracteres válidos, con esto le permitiremos al cliente que introduzca el número de teléfono usando el formato que le sea más conveniente; incluso podría copiarlo y pegarlo desde donde lo tenga guardado. El segundo método eliminará todos los caracteres no numéricos del teléfono proporcionado por el usuario; esto lo usaremos para que, independientemente del formato que el cliente haya usado, podamos darle nuestro propio formato antes de imprimirlo.
 
 ```java
 public class ValidadorTelefono {
@@ -140,7 +140,7 @@ public class FormateadorTelefono {
 }
 ```
 
-Para implementar el método, nuevamente usaremos dos expresiones regulares, una que tome los elementos del teléfono incial (el que solo tiene los números) y lo convierta en el formato final. Para los fomatos iniciales y finales usaremos dos constantes:
+Para implementar el método, nuevamente usaremos dos expresiones regulares, una que tome los elementos del teléfono inicial (el que solo tiene los números) y lo convierta en el formato final. Para los formatos iniciales y finales usaremos dos constantes:
 
 
 ```java
@@ -179,7 +179,7 @@ public class SolucionApplication implements CommandLineRunner {
 }
 ```
 
-Usaremos la inyección de depencias por medio del constructor de la clase para obtener una instancia de cada una de las clases de nuestros servicios:
+Usaremos la inyección de dependenciasS por medio del constructor de la clase para obtener una instancia de cada una de las clases de nuestros servicios:
 
 ```java
 @SpringBootApplication
@@ -219,7 +219,7 @@ public class SolucionApplication implements CommandLineRunner {
 }
 ```
 
-En el cuerpo de `run` usa una instancia de `Scanner` para leer la entrada que el usaurio proporcione a través de la entrada estándar (el teclado).
+En el cuerpo de `run` usa una instancia de `Scanner` para leer la entrada que el usuario proporcione a través de la entrada estándar (el teclado).
 
 ```java
 
@@ -302,6 +302,6 @@ Ejecuta la aplicación. Si lo haces desde IntelliJ Idea deberás hacer clic en l
 
 ![imagen](img/img_03.png)
 
-La aplicación se dentendrá de forma automática cuando el resultado se imprima en pantalla.
+La aplicación se detendrá de forma automática cuando el resultado se imprima en pantalla.
 
 </details>
