@@ -14,7 +14,7 @@ En el Postwork de la sesión anterior implementamos una aplicación que recibe e
 1. La aplicación debe implementar el patrón MVC. Esto quiere decir que el modelo se encontrará en una capa, el acceso a datos en otra capa y la vista (los servicios Rest) en otra capa. Es posible que para esto debas crear más de un nuevo paquete en la aplicación. 
 
 
-La lógica de la aplicación debe estar contenida en una clase “servicio” que deberá recibir todas sus depenencias a través de inyección por constructor.
+La lógica de la aplicación debe estar contenida en una clase “servicio” que deberá recibir todas sus dependencias a través de inyección por constructor.
 
 <details>
   <summary>Solución</summary>
@@ -34,7 +34,7 @@ En la siguiente ventana selecciona `Spring Web` como la única dependencias del 
 
 ![imagen](img/img_02.png)
 
-Crea cuatro nuevos paquetes dentro de la aplicación: `model` que contendrá el modelo de datos de la aplicación; `controller` que tendrá el controlador principal de la aplicación; `persistence` que cotendrá las clases de acceso a datos; y `service` que tendrá los servicios con la lógica de la aplicación.
+Crea cuatro nuevos paquetes dentro de la aplicación: `model` que contendrá el modelo de datos de la aplicación; `controller` que tendrá el controlador principal de la aplicación; `persistence` que contendrá las clases de acceso a datos; y `service` que tendrá los servicios con la lógica de la aplicación.
 
 ![imagen](img/img_03.png)
 
