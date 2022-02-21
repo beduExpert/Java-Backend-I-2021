@@ -2,7 +2,7 @@
 
 ### OBJETIVO
 
-- Capturar información del usuario a través de un formulario que será enviado al servidor para procesar su información.
+- Validar que la información introducida por el usuario en un formulario es correcta.
 
 
 ### DESARROLLO
@@ -24,132 +24,123 @@ En la siguiente ventana elige Spring Web y Thymelead como dependencias del proye
  
 Presiona el botón "Finish".
 
-IntelliJ creará de forma automática un directorio llamdo "templates". Ahí es donde poderemos poner las plantillas que se usarán para la generación de las páginas HTML de nuestros proyectos. Dentro de este directorio crea una nueva página html llamada `index.html` y otra página llamada "registroExitoso.html".
-
-![](img/img_03.png)
-
-En `index.html` colocaremos un pequeño formulario que nos permitirá registrar a un usuario al cual le pediremos su nombre real, nombre de usuario, contraseña y rol. No te preocupes de la parte gráfica, en este curso nos ocuparemos de que el formulario sea funcional y en otros módulos haremos que tenga una mejor presentación. En el formulario usaremos los siguientes elementos de Thymeleaf:
-
-- **th:action**: indica qué manejador de peticiones procesará la información del formulario.
-- **th:object**: el objeto que usaremos para llenar los datos del formulario (los cuales estarán inicialmente vacíos) y para enviar los datos al controlador que los procesará (una vez que hayamos llenado la información).
-- **th:field**: indica qué atributo de nuestro objeto está ligado con ese campo del formulario.
-
-El formulario contiene 4 campos y un botón para enviar la información al controlador correspondiente de Spring MVC.
-
-```html
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Registro</title>
-</head>
-<body>
-<form th:action="@{/registro}" th:object="${usuario}" method="post">
-    <div>
-        <label for="nombre">Nombre: </label>
-        <input id="nombre" type="text" th:field="*{nombre}">
-    </div>
-    <div>
-        <label for="username">Usuario: </label>
-        <input id="username" type="text" th:field="*{username}">
-    </div>
-    <div>
-        <label for="password">Contraseña: </label>
-        <input id="password" type="password" th:field="*{password}">
-    </div>
-
-    <div>
-        <label for="rol">Rol: </label>
-        <select name="rol" id="rol" th:field="*{rol}">
-            <option value="administrador">Administrador</option>
-            <option value="cliente">Cliente</option>
-        </select>
-    </div>
-
-    <input type="submit" th:value="Guardar"/>
-</form>
-</body>
-</html>
-```
-
-Ahora crea un paquete llamado `model`. Ahi colocaremos la clase `Usuario` la cual nos ayudará a recibir la información del formulario. `Usuario` tiene los siguientes atributos:
+Dentro del paquete crea una nueva clase llamada "Cliente" con los siguientes atributos:
 
 ```java
-public class Usuario {
+private long id;
+private String nombre;
+private String correoContacto;
+private String numeroEmpleados;
+private String direccion;
+```
+
+Agrega también los *getter*s y *setter*s de cada atributo.
+
+En el paquete `controllers` agrega una clase llamada `ClienteController` y decórala con la anotación `@RestController`, de la siguiente forma:
+
+```java
+@RestController
+public class ClienteController {
+}
+```
+
+Agrega un nuevo manejador de peticiones tipo `POST` el cual reciba como parámetro un objeto de tipo `Cliente` y regrese un objeto de tipo `ResponseEntity`, de la siguiente forma:
+
+```
+    @PostMapping("/cliente")
+    public ResponseEntity<Void> creaCliente(@RequestBody Cliente cliente){
+        System.out.println(cliente.getNombre());
+        return ResponseEntity.created(URI.create("1")).build();
+    }
+```
+
+7. Desde Postman envía una petición JSON con la siguiente información:
+
+```json
+{
+    "nombre": "Bedu",
+    "correoContacto": "contacto",
+    "numeroEmpleados": "20"
+}
+```
+
+![imagen](img/img_03.png)
+
+
+Envía la petición, con lo que debes obtener un resultado como el mostrado a continuación, en el que no hay un cuerpo en la respuesta y se tiene un código `201 Created`
+
+![imagen](img/img_04.png)
+
+Como puedes ver, a pesar de que estamos enviando información incompleta (no hemos proporcionado una dirección) y con formatos incorrectos (como en el caso del correo de contacto) la petición se recibe y se procesa de forma exitosa. En los siguientes pasos procesarás la información para evitar que esto pase.
+
+Agrega las siguientes validaciones en los atributos de la clase. Con esto estamos restringiendo los valores que puede tener cada uno de estos.
+
+```java
+    @PositiveOrZero(message = "El identificador no puede ser un número negativo")
+    private long id;
+
+    @NotEmpty(message = "El nombre del cliente no puede estar vacío")
+    @Size(min = 5, max = 30, message = "El nombre del cliente debe tener al menos 5 letras y ser menor a 30")
     private String nombre;
-    private String username;
-    private String rol;
-    private String password;
-}
+
+    @Email
+    private String correoContacto;
+
+    @Min(value = 10, message = "Los clientes con menos de 10 empleados no son válidos")
+    @Max(value = 10000, message = "Los clientes con más de 10000 empleados no son válidos")
+    private String numeroEmpleados;
+
+    @NotBlank(message = "Se debe proporcionar una dirección")
+    private String direccion;
 ```
 
-Agrega los correspondientes **getters** y **setters**; no es necesario agregar ningún constructor a la clase anterior.
-
-Ahora crea un nuevo paquete llamado `controller` y dentro de este una clase `UsuarioController`. 
+En la clase `ClienteController` agrega la siguiente anotación, con la cual se le indica a Spring que debe aplicar las validaciones indicadas antes de darle el control al manejador. 
 
 ```java
-public class UsuarioController {
-    
-}
+@Valid
 ```
 
-Lo primero que haremos es indicar que esta clase es un controlador de Spring MVC decorándola con la anotación `@Controller`.
+El método `creaCliente` queda de la siguiente forma:
 
 ```java
-@Controller
-public class UsuarioController {
-
-}
-```
-
-A continuación, agregamos un manejador de peticiones tipo **GET**. Este manejador será invocado cuando solicitemos que se muestre el formulario vacío y colocará un `Usuario` "nuevo" (sin datos) para inicializar el formulario. Este es un paso incómodo pero necesario cuando trabajamos con Thymeleaf, ya que asocia un objeto al formulario y si no regresamos este objeto inicial obtendremos un error.
-
-Indicamos en el manejador que debe regresar el template con el nombre `index`.
-
-```java
-    @GetMapping({"/", "/index"})
-    public String formularioRegistro(Model model){
-        model.addAttribute("usuario", new Usuario());
-        return "index";
+    public ResponseEntity<Void> creaCliente(@Valid @RequestBody Cliente cliente){
+        System.out.println(cliente.getNombre());
+        return ResponseEntity.created(URI.create("1")).build();
     }
 ```
 
-Agregamos un segundo manejador, para peticiones **POST**. Este segundo manejador será el que procese la petición una vez que el usaurio haya llenado el formulario. Lo único que haremos en este momento es recibir como parámetro el objeto `Usuario`, el cual contendrá la información que colocamos en el formulario, y lo regresaremos a una nueva vista en la plantilla `registroExitoso`:
+Ejecuta nuevamente la petición desde Postman. Esta vez debes obtener un error como el siguiente, que indica que la petición realizada tiene un formato incorrecto:
 
-```java
-    @PostMapping("/registro")
-    public ModelAndView registra(Usuario usuario) {
-        ModelAndView mav = new ModelAndView("registroExitoso");
-        mav.addObject("usuario", usuario);
-        return mav;
-    }
+![imagen](img/img_05.png)
+
+En la consola de IntelliJ debes tener el siguiente mensaje:
+
+```
+ Resolved [org.springframework.web.bind.MethodArgumentNotValidException: 
+ Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Void> org.bedu.java.backend.sesion3.ejemplo1.controller.ClienteController.creaCliente(org.bedu.java.backend.sesion3.ejemplo1.model.Cliente) with 3 errors: 
+ 
+ [Field error in object 'cliente' on field 'direccion': rejected value [null]; codes [NotBlank.cliente.direccion,NotBlank.direccion,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cliente.direccion,direccion]; arguments []; default message [direccion]]; default message [Se debe proporcionar una dirección]] 
+ 
+ [Field error in object 'cliente' on field 'correoContacto': rejected value [contacto]; codes [Email.cliente.correoContacto,Email.correoContacto,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cliente.correoContacto,correoContacto]; arguments []; default message [correoContacto],[Ljavax.validation.constraints.Pattern$Flag;@74570cf7,.*]; default message [must be a well-formed email address]] 
+ 
+ [Field error in object 'cliente' on field 'nombre': rejected value [Bedu]; codes [Size.cliente.nombre,Size.nombre,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cliente.nombre,nombre]; arguments []; default message [nombre],30,5]; default message [El nombre del cliente debe tener al menos 5 letras y ser menor a 30]] ]
+
+```
+![imagen](img/img_06.png)
+
+En los mensajes anteriores se indica qué campos contienen errores.
+
+Modifica la petición en Postman para enviar el siguiente cuerpo:
+
+```json
+{
+    "nombre": "BeduORG",
+    "correoContacto": "contacto@bedu.org",
+    "numeroEmpleados": "20",
+    "direccion": "direccion"
+}
 ```
 
-Finalmente, en la plantilla `registroExitoso.html` colocamos un mensaje felicitando al usuario por el registro:
+Envía nuevamente la petición y ahora nuevamente debes obtener una respuesta correcta:
 
-
-```html
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Registro Exitoso</title>
-</head>
-<body>
-Bienvenido <strong><span th:text=${usuario.nombre}/></strong> tu registro ha sido exitoso
-</body>
-</html>
-```
-
-Ejecuta la aplicación y entra a la siguiente dirección desde tu navegador [http://localhost:8080/](http://localhost:8080). Debes ver el siguiente formulario:
-
-![](img/img_04.png)
-
-Coloca la información solicitada y presiona el botón `Guardar`:
-
-![](img/img_05.png)
-
-Debes ver la siguiente salida:
-
-![](img/img_06.png)
-
-
+![imagen](img/img_07.png)
