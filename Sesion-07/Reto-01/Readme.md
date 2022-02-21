@@ -1,22 +1,22 @@
-## Peticiones GET
+## Reto 01: Valores dinámicos con Thymeleaf
 
-### OBJETIVO 
+### OBJETIVO
 
-Hacer dos endpoints `GET`, uno que sirva una petición sin parametros y uno con parametros.
+- Generar un mensaje de forma dinámico que se muestre en una página HTML generada con Thymeleaf
 
-#### REQUISITOS 
+### DESARROLLO
 
-El código del ejemplo 1
+Ahora que pudimos mostrar un mensaje estático en una página creada con Thymeleaf es momento de cambiarlo por uno dinámico. En esta ocasión deberás recibir una cadena de texto proporcionada por el usuario y mostrar la en una página. La cadena de texto puede contener cualquier número de caracteres y espacios en blanco.
 
-#### DESARROLLO
+No te preocupes si al momento de ejecutar la aplicación esta muestra el siguiente contenido, eso quiere decir que el controlador no está recibiendo el parámetro proporcionado:
 
-Modificar el código del ejemplo 1 para:
+![imagen](img/img_01.png)
 
-Hacer un endpoint `/adios` que reciba peticiones `GET` y que regrese un objeto `Cita` similar al endpoint `/`
+¡Buena suerte!
 
-Hacer un endpoint `/despide/{nombre}` que reciba peticiones `GET` y un nombre como parametro y regrese un objeto `Cita` que en el texto tenga `adios {nombre}`, similar al endpoint `/saluda/{nombre}`.
 
-#### Solución
+---
 
-Ver la carpeta [solucion](solucion)
+### Solución
 
+¡Recuerda intentar resolver el reto antes de ver la solución! Una vez que lo hayas intentado puedes dirijirte al [proyecto con la solución](./solucion).
