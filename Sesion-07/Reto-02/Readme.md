@@ -1,20 +1,24 @@
-## Peticiones POST
+## Reto 02: Mensajes de error
 
-### OBJETIVO 
+### OBJETIVO
 
-Hacer un endpoint que sirva peticiones `POST`
+- Indicar en la página web cuando ocurra un error de validación, y darle suficiente información al usuario para que corrija por si mismo el error.
 
-#### REQUISITOS 
+### DESARROLLO
 
-El código del ejemplo 2
+Ya hemos validado que la información introducida por el usuario dentro del formulario cumpla con el formato que estamos esperando. Ahora es momento de que le indiques al usuario en caso de que haya cometido un error, cómo puede corregir la información para continuar con el procesamiento del mismo.
 
-#### DESARROLLO
+Recuerda que para eso debes usar los elementos correspondientes de Thymeleaf.
 
-Agregar un endpoint `/adios` que regrese un objeto de la clase `Peticion` y tome como parametro un objeto de la clase `Cita` y que use el autor de la petición en la respuesta.
+El resultado final debe verse así:
 
-Usar un programa como `POSTMAN` o similar para poder mandar el objeto en formato JSON.
+![imagen](img/img_01.png)
 
-#### Solución
+¡Buena suerte!
 
-Ver la carpeta [solucion](solucion)
 
+---
+
+### Solución
+
+¡Recuerda intentar resolver el reto antes de ver la solución! Una vez que lo hayas intentado puedes dirijirte al [proyecto con la solución](./solucion).
