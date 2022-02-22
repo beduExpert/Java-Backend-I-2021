@@ -45,5 +45,5 @@ Además, usaremos uno de los mejores IDE (Integrated Develoment Environment) del
 |    5   | [Java Beans y la Inversión de Control](./Sesion-05)          | Usar Spring como motor de inyección de dependencias.              |
 |    6   | [Patrón MVC con Spring Boot](./Sesion-06)                    | Usar Spring MVC como framework de manejo de peticiones web.       |
 |    7   | [Integración de Thymeleaf y Spring Boot](./Sesion-07)        | Usar Thymeleaf como motor de generación de vistas dinámicas       |
-|    8   | [Sesión 8](./Sesion-08)     | ??                       |
+|    8   | [Conexión a base de datos con Spring Data](./Sesion-08)      | Usar Spring Data JPA para trabajar con bases de datos relacionales|
 
