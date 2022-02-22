@@ -87,7 +87,7 @@ public class Usuario {
 
 Agrega también los *getter*s y *setter*s de cada atributo. No es necesario agregar constructores.
 
-Ahora, agregaremos las validaciones. Para validar la información debemos decorar los campos con las correspondientes anotaciones del API *Bean Validator**. En cada campo indicaremos las restricciones para cada uno de los valores. En el campo `telefono` colocaremos la expresion regular que hemos estado usando para validar el formato del mismo. Gracias a esto delegaremos el trabajo de realizar la validación a Spring antes de que siquiera recibamos la información en el controlador.
+Ahora, agregaremos las validaciones. Para validar la información debemos decorar los campos con las correspondientes anotaciones del API *Bean Validator**. En cada campo indicaremos las restricciones para cada uno de los valores. En el campo `telefono` colocaremos la expresión regular que hemos estado usando para validar el formato del mismo. Gracias a esto delegaremos el trabajo de realizar la validación a Spring antes de que siquiera recibamos la información en el controlador.
 
 ```java
     @NotBlank
@@ -165,7 +165,7 @@ Bienvenido <strong><span th:text=${usuario.nombre}/></strong> tu registro ha sid
 </html>
 ```
 
-Antes de ejecutar la aplicación debemos hacer un par de moficiaciones más. La primera es a la plantilla donde se encuentra el formulario `index.html`. Necesitamos indicar en qué lugar se mostrarán los mensajes de error de los campos que no cumplan con las validaciones. Para mostrar todos los mensajes de error, debemos colocar el siguiente bloque dentro de nuestro formulario:
+Antes de ejecutar la aplicación debemos hacer un par de modificaciones más. La primera es a la plantilla donde se encuentra el formulario `index.html`. Necesitamos indicar en qué lugar se mostrarán los mensajes de error de los campos que no cumplan con las validaciones. Para mostrar todos los mensajes de error, debemos colocar el siguiente bloque dentro de nuestro formulario:
 
 ```html
 <form th:action="@{/registro}" th:object="${usuario}" method="post">
@@ -208,7 +208,7 @@ Llena los campos con información incorrecta y presiona el botón `Guardar`. Deb
 
 ![imagen](img/img_04.png)
 
-Si bien ya estamos viendo los errores, los mensajes que se despligan no son los más claros. Podemos personalizar el contenido del mensaje usando el atributo `message` de las anotaciones que usamos para validar la información en la clase `Usuario`:
+Si bien ya estamos viendo los errores, los mensajes que se despliegan no son los más claros. Podemos personalizar el contenido del mensaje usando el atributo `message` de las anotaciones que usamos para validar la información en la clase `Usuario`:
 
 ```java
     @NotBlank(message = "El nombre de usuario es un campo obligatorio.")
