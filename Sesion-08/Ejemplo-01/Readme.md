@@ -138,7 +138,7 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/bedu?serverTimezone=UTC
 spring.datasource.username=<usuario>
 spring.datasource.password=<password>
-`
+```
 
 Ejecuta la aplicación y envía la siguinte petición desde Postman:
 
