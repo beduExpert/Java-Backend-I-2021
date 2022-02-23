@@ -1,30 +1,161 @@
-## Obtener datos de una api
+## Ejemplo 01: Persistencia de datos con Spring Data JPA
 
 ### OBJETIVO
 
-Obtener datos de una api para posteriormente guardarlos, procesarlos y exponerlos.
+- Hacer uso de las anotaciones básicas de JPA para indicar qué objeto debe ser tratado como una entidad de base de datos.
+- Aprender qué es un repositorio y los métodos por default que ofrece.
 
-#### REQUISITOS
 
-Un proyecto de spring boot creado usando initializr con las dependencias `Lombok` y `Spring Web`
+### DESARROLLO
 
-#### DESARROLLO
+Antes de comenzar asegúrate de tener instado [MySQL Community Edition](https://www.mysql.com/products/community/) y de crear una base de datos llamada `bedu`.
 
-Vamos a obtener los datos de las transacciones mas recientes de un exchange de criptomonedas [Binance](https://www.binance.com/en), la documentación de su API la podemos encontrar en [Documentacion](https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md).
+Crea un proyecto usando Spring Initializr desde el IDE IntelliJ con las siguientes opciones:
 
-El endpoint que nos da esta información es [Recent trades list](https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md#recent-trades-list) el cual no dice la ruta y los parametros que necesita nuestra petición.
+  - Gradle Proyect (no te preocupes, no es necesario que tengas Gradle instalado).
+  - Lenguaje: **Java**.
+  - Versión de Spring Boot, la versión estable más reciente
+  - Grupo, artefacto y nombre del proyecto.
+  - Forma de empaquetar la aplicación: **jar**.
+  - Versión de Java: **11** o superior.
 
-Vamos a obtener los datos cada 5 minutos, para esto usaremos una tarea programada en la clase [Colector.java](demo/src/main/java/com/example/demo/Colector.java).
+![](img/img_01.png)
 
-Notemos la inyección de la dependencia `RestTemplate` con `@Autowired` la cual se registró en la clase [ProveoBeans.java](demo/src/main/java/com/example/demo/ProveoBeans.java), también notemos que para parsear la respuesta en `JSON` que nos regresa la petición usamos una clase de java que nosotros creamos [Transaccion.java](demo/src/main/java/com/example/demo/Transaccion.java).
+En la siguiente ventana elige `Spring Web`, `MySQL Driver` y `Spring Data JPA` como dependencias del proyecto:
 
-El objetivo es guardar esta información en una base de datos, procesarla y exponerla pero por ahora para comprobar que recibimos y parseamos bien la información solo logearemos los precios usando `log.info` el cual obtuvimos con la anotación `@Slf4j`.
+![imagen](img/img_02.png)
 
-También por ahora configuramos el nivel de logeo de toda la aplicación y el de nuestras clases para que nos muestre solo información que consideramos útil, esto lo hacemos en el archivo [application.properties](demo/src/main/resources/application.properties).
+Presiona el botón "Finish".
 
+Dentro del nuevo proyecto crea los siguientes subpaquetes: `controller`, `model` y `persistence`.
+
+![](img/img_03.png)
+
+Dentro del paquete `model` crea una clase llamada `Cliente` con los siguientes atributos, y agrega sus correspondientes métodos **getter** y **setter**:
+
+```java
+public class Cliente {
+    private Long id;
+    private String nombre;
+    private String correoContacto;
+    private int numeroEmpleados;
+    private String direccion;
+}
 ```
-logging.level.root=ERROR
-logging.level.com.example.demo=INFO
-```
-![precios](consulta.png)
 
+Decora la clase con las anotaciones `@Entity` y `@Table` del paquete `javax.persistence`:
+
+```java
+@Entity
+@Table(name = "CLIENTE")
+public class Cliente {
+
+}
+```
+
+Decora los atributos `id`, `correoContacto` y `numeroEmpleados` con las siguientes anotaciones (`nombre` y `direccion` permanecen igual)
+
+```java
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombre;
+
+    @Column(name = "correo_contacto", length = 30)
+    private String correoContacto;
+
+    @Column(name = "numero_empleados")
+    private int numeroEmpleados;
+
+    private String direccion;
+```
+
+En el paquete persistence crea una interface llamada `ClienteRepository` que extienda de `JpaRepository`. Esta interface permanecerá sin métodos:
+
+```java
+public interface ClienteRepository  extends JpaRepository<Cliente, Long> {
+
+}
+```
+
+En el paquete `controller` crea una nueva clase llamada `ClienteController` y decórala con las anotaciones de Spring MVC para indicar que esta clase es un controlador web.
+
+```java
+@RestController
+@RequestMapping("/cliente")
+public class ClienteController {
+
+}
+```
+
+Agrega un atributo `final` de tipo `ClienteRepository`:
+
+```java
+  private final ClienteRepository clienteRepository;
+```
+
+Agrega un constructor a `ClienteController` e inyecta la la instancia de `ClienteRepository` usando la inyección de construcción:
+
+```java
+    @Autowired
+    public ClienteController(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
+```
+
+Crea un método **POST** que reciba un objeto `Cliente` como parámetro y regrese un código de respuesta `201`:
+
+```java
+    @PostMapping
+    public ResponseEntity<Void> creaCliente(@RequestBody Cliente cliente){
+        return ResponseEntity.created(URI.create("")).build();
+    }
+```
+
+Dentro del método `creaCliente` usa el objeto `clienteRepository` para guardar el objeto `cliente` en base de datos. Usa el `id` del objeto almacenado para regresarlo en la respuesta del método.
+
+```java
+    @PostMapping
+    public ResponseEntity<Void> creaCliente(@RequestBody Cliente cliente){
+
+        Cliente clienteDB = clienteRepository.save(cliente);
+
+        return ResponseEntity.created(URI.create(clienteDB.getId().toString())).build();
+    }
+```
+
+En el directorio `resources` busca o crea el archivo `application.properties`.
+
+![](img/img_04.png)
+
+Coloca el siguiente contenido en el archivo (personaliza el contenido en caso de ser necesario):
+
+```json
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.generate_statistics=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/bedu?serverTimezone=UTC
+spring.datasource.username=<usuario>
+spring.datasource.password=<password>
+`
+
+Ejecuta la aplicación y envía la siguinte petición desde Postman:
+
+```json
+{
+    "nombre": "BeduORG",
+    "correoContacto": "contacto@bedu.org",
+    "numeroEmpleados": "20",
+    "direccion": "direccion"
+}
+```
+
+debes tener la siguiente respuesta en la consola de Postman:
+
+![](img/img_05.png)
+
+
+Revisa la base de datos, la tabla `CLIENTE` debe haberse creado de forma automática y debe tener almacenado el registro con los datos enviados desde Postman:
+
+![](img/img_06.png)

@@ -24,7 +24,7 @@ En este módulo aprenderemos:
 
 ---
 
-<img src=".github/assets/img/entities.jpg" align="right" height="90" hspace="10">
+<img src=".github/assets/img/entities.png" align="right" height="90" hspace="10">
 
 #### <ins>Tema 1: Introducción a Spring Data JPA</ins>
 
@@ -48,7 +48,7 @@ En algunas ocasiones necesitamos que cierta información exista en la base de dat
 
 ---
 
-<img src=".github/assets/img/h2.jpg" align="right" height="90" hspace="10">
+<img src=".github/assets/img/h2.png" align="right" height="90" hspace="10">
 
 #### <ins>Tema 3:Uso de la consola embebdida H2 para manejar la base de datos</ins>
 
