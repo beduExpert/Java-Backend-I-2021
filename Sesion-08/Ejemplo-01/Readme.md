@@ -130,7 +130,7 @@ En el directorio `resources` busca o crea el archivo `application.properties`.
 
 Coloca el siguiente contenido en el archivo (personaliza el contenido en caso de ser necesario):
 
-```json
+```groovy
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.generate_statistics=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
