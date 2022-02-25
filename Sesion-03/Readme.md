@@ -35,11 +35,12 @@ JUnit es un framework para realizar y automatizar pruebas de aplicaciones Java. 
 
 <img src=".github/assets/img/mockito.jpg" align="right" height="90" hspace="10">
 
+#### <ins>Tema 2: Dobles de pruebas con JUnit y Mockito.</ins>
+
 Mockito sirve para crear Mocks, Spys, etc, de manera sencilla.
 
 Esta librería de Java permite simular el comportamiento de una clase de forma dinámica. De esta forma se crea un aislamiento de las dependencias con otras clases y sólo se probará la funcionalidad que se quiere probar. La simulación del comportamiento de una clase se realiza mediante los dobles.
 
-#### <ins>Tema 2: Dobles de pruebas con JUnit y Mockito.</ins>
 
 - [**`EJEMPLO 2`**](./Ejemplo-02)
 - [**`Reto 2`**](./Reto-02)
@@ -48,10 +49,9 @@ Esta librería de Java permite simular el comportamiento de una clase de forma d
 
 <img src=".github/assets/img/suite.png" align="right" height="90" hspace="10">
 
-El concepto fundamental en estas herramientas es el caso de prueba (test case), y la suite de prueba (test suite). Los casos de prueba son clases o módulos que disponen de métodos para probar los métodos de una clase o módulo concreta/o. Así, para cada clase que quisiéramos probar definiríamos su correspondiente clase de caso de prueba. Mediante las suites podemos organizar los casos de prueba, de forma que cada suite agrupa los casos de prueba de módulos que están funcionalmente relacionados.
-
-
 #### <ins>Tema 3: Suites de pruebas.</ins>
+
+El concepto fundamental en estas herramientas es el caso de prueba (test case), y la suite de prueba (test suite). Los casos de prueba son clases o módulos que disponen de métodos para probar los métodos de una clase o módulo concreta/o. Así, para cada clase que quisiéramos probar definiríamos su correspondiente clase de caso de prueba. Mediante las suites podemos organizar los casos de prueba, de forma que cada suite agrupa los casos de prueba de módulos que están funcionalmente relacionados.
 
 - [**`EJEMPLO 3`**](./Ejemplo-03)
   
