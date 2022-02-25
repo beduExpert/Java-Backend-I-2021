@@ -32,7 +32,6 @@ En este módulo aprenderemos:
 - Ejecución de programas en código Java usando Gradle
 - Instalación y uso de plugins de Gradle
 
-
 ---
 
 <img src=".github/assets/img/Build-Tools.jpg" align="right" height="90" hspace="10">
@@ -59,6 +58,7 @@ Es aquí donde tendrás tu [primer reto](./Reto-01) en el que tendrás que escri
 - [**`EJEMPLO 3`**](./Ejemplo-03)
 - [**`Reto 1`**](./Reto-01)
 
+---
 
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" align="right" height="90" hspace="10">
 
@@ -70,6 +70,8 @@ Aquí aprenderás como compilar y ejecutar tu aplicación sin tener que generar 
 
 - [**`EJEMPLO 4`**](./Ejemplo-04)
 - [**`Reto 3`**](./Reto-03)
+
+---
 
 ### 3. Postwork :memo:
 
