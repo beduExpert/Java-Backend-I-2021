@@ -36,9 +36,9 @@ Spring Initializr es un portal que se encarga de generar, de forma automática, 
 
 <img src=".github/assets/img/spring-boot-controller.png" align="right" height="90" hspace="10">
 
-Spring MVC es el módulo de Spring que se encarga del manejo de peticiones HTTP (el protocolo que se usa en los servicios web REST). El framework define una serie de interfaces que siguen el patrón de diseño Strategy para todas las responsabilidades que deben ser manejadas por el framework. El objetivo de cada interface es ser simple y clara, para que sea fácil para los usuarios de Spring MVC (o sea, nosotros) crear nuestras propias implementaciones.
-
 #### <ins>Tema 2: Creación de controladores de lectura con Spring MVC.</ins>
+
+Spring MVC es el módulo de Spring que se encarga del manejo de peticiones HTTP (el protocolo que se usa en los servicios web REST). El framework define una serie de interfaces que siguen el patrón de diseño Strategy para todas las responsabilidades que deben ser manejadas por el framework. El objetivo de cada interface es ser simple y clara, para que sea fácil para los usuarios de Spring MVC (o sea, nosotros) crear nuestras propias implementaciones.
 
 - [**`EJEMPLO 2`**](./Ejemplo-02)
 - [**`Reto 2`**](./Reto-02)
@@ -55,7 +55,8 @@ Uno de los puntos más importantes de REST es el uso de los métodos HTTP de for
 
 - [**`EJEMPLO 3`**](./Ejemplo-03)
 - [**`Reto 3`**](./Reto-03)
-  
+
+---  
 
 ### 3. Postwork :memo:
 
