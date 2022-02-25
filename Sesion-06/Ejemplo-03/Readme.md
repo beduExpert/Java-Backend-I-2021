@@ -51,7 +51,6 @@ Para recibir un archivo cargado a través de una petición HTTP, debe hacer lo s
 
 Hay que tener en cuenta que el nombre del objeto `MultipartFile` decorado con `@RequestPart` debe coincidir con el nombre de la parte en la petición. Veremos cómo hacer esto desde Postman en unos momentos. 
 
-![](img/img_04.png)
 
 También es posible hacer la carga de múltiples archivos al mismo tiempo declarando el objeto `MultipartFile` como un arreglo, de la siguiente forma:
 
@@ -78,8 +77,4 @@ Ahora haremos una modificación a la forma en la que hacemos la petición desde 
 Ahora sí, ejecuta tu aplicación. Debes ver la siguiente respuesta en Postman:
 
 ![](img/img_06.png)
-
-Y en la consola de IntelliJ Idea debes tener los siguientes mensajes:
-
-![](img/img_07.png)
 
