@@ -69,7 +69,7 @@ Aquí aprenderás como compilar y ejecutar tu aplicación sin tener que generar 
 - Compilación y ejecución de aplicaciones Java
 
 - [**`EJEMPLO 4`**](./Ejemplo-04)
-- [**`Reto 3`**](./Reto-03)
+- [**`Reto 2`**](./Reto-02)
 
 ---
 
@@ -77,7 +77,7 @@ Aquí aprenderás como compilar y ejecutar tu aplicación sin tener que generar 
 
 Encuentra las indicaciones y consejos para reflejar los avances de tu proyecto de este módulo.
  
-- [**`POSTWORK SESIÓN 5`**](./Postwork/)
+- [**`POSTWORK SESIÓN 1`**](./Postwork/)
   
 <br/>
 
