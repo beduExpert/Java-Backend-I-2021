@@ -1,4 +1,4 @@
-## Reto 03: Prueba de Exceptions
+## Reto 01: Prueba de Exceptions
 
 ### 🎯 OBJETIVO
 
